@@ -1,0 +1,1213 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <!--Christmas Carol - Situations-->
+
+<situations>
+  <!--Chapter 1-->
+<situation>
+  <!-- Grigoruta G. Andrei Madalin -->
+  <name type="10">
+    Marley was dead
+  </name>
+  <players>
+    <player>Scrooge</player>
+    <player>Marley</player>
+  </players>
+  <objects>
+    <object>door-nail</object>
+    <object>warehouse door</object>
+  </objects>
+  <events>
+    <event>was dead</event>
+    <event>was signed</event>
+  </events>
+  <keywords>
+	  <keyword>burial</keyword>
+    <keyword>executor</keyword>
+    <keyword>administrator</keyword>
+    <keyword>mourner</keyword>
+    <keyword>funeral</keyword>
+    <keyword>died</keyword>
+    <keyword>dead</keyword>
+    <keyword>coffin-nail</keyword>
+  </keywords>
+  <places>
+    <place>firm</place>
+	  <place>warehouse</place>
+  </places>
+  <paragraph pageNumber="3">
+    
+	Marley was dead: to begin with. There is no doubt whatever about that. The register of his burial was signed by the clergyman, the clerk, the undertaker, and the chief mourner. Scrooge signed it. And Scrooge’s name was good upon ‘Change, for anything he chose to put his hand to.
+	Old Marley was as dead as a door-nail.
+	Mind! I don’t mean to say that I know, of my own knowledge, what there is particularly dead about a door-nail. I might have been inclined, myself, to regard a coffin-nail as the deadest piece of ironmongery in the trade. But the wisdom of our ancestors is in the simile; and my unhallowed hands shall not disturb it, or the Country’s done for. You will therefore permit me to repeat, emphatically, that Marley was as dead as a door-nail.
+	Scrooge knew he was dead? Of course he did. How could it be otherwise? Scrooge and he were partners for I don’t know how many years. Scrooge was his sole executor, his sole administrator, his sole assign, his sole residuary legatee, his sole friend, and sole mourner. And even Scrooge was not so dreadfully cut up by the sad
+	event, but that he was an excellent man of business on the very day of the funeral, and solemnised it with an undoubted bargain. The mention of Marley’s funeral brings me back to the point I started from. There is no doubt that Marley was dead. This must be distinctly understood, or nothing wonderful can come of the story I am going to relate. If we were not perfectly convinced that Hamlet’s Father died before the play began, there would be nothing more remarkable in his taking a stroll at night, in an easterly wind, upon his own ramparts, than there would be in any other middle-aged gentleman rashly turning out after dark in a breezy spot — say Saint Paul’s Churchyard for instance — literally to astonish his son’s weak mind.
+	Scrooge never painted out Old Marley’s name. There it stood, years afterwards, above the warehouse door: Scrooge and Marley. The firm was known as Scrooge and Marley. Sometimes people new to the business called Scrooge Scrooge, and sometimes Marley, but he answered to both names. It was all the same to him.
+	Oh! But he was a tight-fisted hand at the grind- stone, Scrooge! a squeezing, wrenching, grasping, scraping, clutching, covetous, old sinner! Hard and sharp as flint, from which no steel had ever struck out generous fire;
+	secret, and self-contained, and solitary as an oyster. The cold within him froze his old features, nipped his pointed nose, shrivelled his cheek, stiffened his gait; made his eyes red, his thin lips blue; and spoke out shrewdly in his grating voice. A frosty rime was on his head, and on his eyebrows, and his wiry chin. He carried his own low temperature always about with him; he iced his office in the dogdays; and didn’t thaw it one degree at Christmas.
+	External heat and cold had little influence on Scrooge. No warmth could warm, no wintry weather chill him. No wind that blew was bitterer than he, no falling snow was more intent upon its purpose, no pelting rain less open to entreaty. Foul weather didn’t know where to have him. The heaviest rain, and snow, and hail, and sleet, could boast of the advantage over him in only one respect. They often ‘came down’ handsomely, and Scrooge never did.
+	Nobody ever stopped him in the street to say, with gladsome looks, ‘My dear Scrooge, how are you? When will you come to see me?’ No beggars implored him to bestow a trifle, no children asked him what it was o’clock, no man or woman ever once in all his life inquired the way to such and such a place, of Scrooge. Even the blind men’s dogs appeared to know him; and when they saw him coming on, would tug their owners into doorways
+	and up courts; and then would wag their tails as though they said, ‘No eye at all is better than an evil eye, dark master!’
+	But what did Scrooge care! It was the very thing he liked. To edge his way along the crowded paths of life, warning all human sympathy to keep its distance, was what the knowing ones call ‘nuts’ to Scrooge.
+	Once upon a time — of all the good days in the year, on Christmas Eve — old Scrooge sat busy in his counting-house. It was cold, bleak, biting weather: foggy withal: and he could hear the people in the court outside, go wheezing up and down, beating their hands upon their breasts, and stamping their feet upon the pavement stones to warm them. The city clocks had only just gone three, but it was quite dark already — it had not been light all day — and candles were flaring in the windows of the neighbouring offices, like ruddy smears upon the palpable brown air. The fog came pouring in at every chink and keyhole, and was so dense without, that although the court was of the narrowest, the houses opposite were mere phantoms. To see the dingy cloud come drooping down, obscuring everything, one might have thought that Nature lived hard by, and was brewing on a large scale.
+    
+  </paragraph>
+</situation>
+
+<situation>
+  <!-- Grigoruta G. Andrei Madalin -->
+  <name type="1">
+    Christmas invitation
+  </name>
+  <players>
+    <player>Scrooge</player>
+    <player>nephew</player>
+    <player>clerk</player>
+  </players>
+  <objects>
+    <object>letters</object>
+    <object>coal-box</object>
+    <object>fire</object>
+    <object>coal</object>
+	  <object>candle</object>
+  </objects>
+  <events>
+    <!--verbs-->
+    <event>dine with us tomorrow</event>
+    <event>leave it alone</event>
+  </events>
+  <keywords>
+    <keyword>merry</keyword>
+    <keyword>Merry Christmas</keyword>
+    <keyword>talking</keyword>
+    <keyword>said</keyword>
+    <keyword>repeated</keyword>
+    <keyword>speaker</keyword>
+  </keywords>
+  <places>
+    <place>Scrooge's counting house</place>
+  </places>
+  <paragraph pageNumber="7">
+  
+	The door of Scrooge’s counting-house was open that he might keep his eye upon his clerk, who in a dismal little cell beyond, a sort of tank, was copying letters. Scrooge had a very small fire, but the clerk’s fire was so very much smaller that it looked like one coal. But he couldn’t replenish it, for Scrooge kept the coal-box in his own room; and so surely as the clerk came in with the shovel, the master predicted that it would be necessary for them to part. Wherefore the clerk put on his white comforter, and tried to warm himself at the candle; in which effort, not being a man of a strong imagination, he failed.
+	‘A merry Christmas, uncle! God save you!’ cried a cheerful voice. It was the voice of Scrooge’s nephew, who came upon him so quickly that this was the first intimation he had of his approach.
+	‘Bah!’ said Scrooge, ‘Humbug!’
+	He had so heated himself with rapid walking in the fog and frost, this nephew of Scrooge’s, that he was all in a glow; his face was ruddy and handsome; his eyes sparkled, and his breath smoked again. ‘Christmas a humbug, uncle!’ said Scrooge’s nephew. ‘You don’t mean that, I am sure?’
+	‘I do,’ said Scrooge. ‘Merry Christmas! What right have you to be merry? What reason have you to be merry? You’re poor enough.’
+	‘Come, then,’ returned the nephew gaily. ‘What right have you to be dismal? What reason have you to be morose? You’re rich enough.’
+	Scrooge having no better answer ready on the spur of the moment, said ‘Bah!’ again; and followed it up with ‘Humbug.’
+	‘Don’t be cross, uncle!’ said the nephew.
+	‘What else can I be,’ returned the uncle, ‘when I live in such a world of fools as this? Merry Christmas! Out upon merry Christmas! What’s Christmas time to you but a time for paying bills without money; a time for finding yourself a year older, but not an hour richer; a time for balancing your books and having every item in ‘em through a round dozen of months presented dead against you? If I could work my will,’ said Scrooge indignantly, ‘every idiot who goes about with ‘Merry Christmas’ on his lips, should be boiled with his own pudding, and buried with a stake of holly through his heart. He should!’
+	‘Uncle!’ pleaded the nephew.
+	‘Nephew!’ returned the uncle sternly, ‘keep Christmas in your own way, and let me keep it in mine.’
+	‘Keep it!’ repeated Scrooge’s nephew. ‘But you don’t keep it.’
+	‘Let me leave it alone, then,’ said Scrooge. ‘Much good may it do you! Much good it has ever done you!’
+	‘There are many things from which I might have derived good, by which I have not profited, I dare say,’ returned the nephew. ‘Christmas among the rest. But I am sure I have always thought of Christmas time, when it has come round — apart from the veneration due to its sacred name and origin, if anything belonging to it can be apart from that — as a good time; a kind, forgiving, charitable, pleasant time: the only time I know of, in the long calendar of the year, when men and women seem by one consent to open their shut-up hearts freely, and to think of people below them as if they really were fellow-passengers to the grave, and not another race of creatures bound on other journeys. And therefore, uncle, though it has never put a scrap of gold or silver in my pocket, I believe that it has done me good, and will do me good; and I say, God bless it!’
+	The clerk in the Tank involuntarily applauded. Becoming immediately sensible of the impropriety, he poked the fire, and extinguished the last frail spark for ever.
+	‘Let me hear another sound from you,’ said Scrooge, ‘and you’ll keep your Christmas by losing your situation! You’re quite a powerful speaker, sir,’ he added, turning to his nephew. ‘I wonder you don’t go into Parliament.’
+	‘Don’t be angry, uncle. Come! Dine with us tomorrow.’
+	Scrooge said that he would see him — yes, indeed he did. He went the whole length of the expression, and said that he would see him in that extremity first.
+	‘But why?’ cried Scrooge’s nephew. ‘Why?’
+	‘Why did you get married?’ said Scrooge.
+	‘Because I fell in love.’
+	‘Because you fell in love!’ growled Scrooge, as if that were the only one thing in the world more ridiculous than a merry Christmas. ‘Good afternoon!’
+	‘Nay, uncle, but you never came to see me before that happened. Why give it as a reason for not coming now?’
+	‘Good afternoon,’ said Scrooge.
+	‘I want nothing from you; I ask nothing of you; why cannot we be friends?’
+	‘Good afternoon,’ said Scrooge.
+	‘I am sorry, with all my heart, to find you so resolute. We have never had any quarrel, to which I have been a party. But I have made the trial in homage to Christmas,
+	and I’ll keep my Christmas humour to the last. So A Merry Christmas, uncle!’
+	‘Good afternoon,’ said Scrooge.
+	‘And A Happy New Year!’
+	‘Good afternoon,’ said Scrooge.
+	His nephew left the room without an angry word, notwithstanding. He stopped at the outer door to bestow the greetings of the season on the clerk, who cold as he was, was warmer than Scrooge; for he returned them cordially.
+	‘There’s another fellow,’ muttered Scrooge; who overheard him: ‘my clerk, with fifteen shillings a week, and a wife and family, talking about a merry Christmas. I’ll retire to Bedlam.’
+    
+  </paragraph>
+</situation>
+<!-- Grigoruta G. Andrei Madalin -->
+<situation>
+  <name type="1">
+    Scrooge refuses to help the Poor and Destitute
+  </name>
+  <players>
+    <player>Scrooge</player>
+    <player>gentlemen</player>
+  </players>
+  <objects>
+    <object>books</object>
+    <object>papers</object>
+    <object>list</object>
+    <object>pen</object>
+  </objects>
+  <events>
+    <!--verbs-->
+    <event>bowed to him</event>
+    <event>furnish Christian cheer</event>
+    <event>raise a fund</event>
+    <event>useless to pursue</event>
+    <event>withdrew</event>
+  </events>
+  <keywords>
+	  <keyword>common necessaries</keyword>
+	  <keyword>common comforts</keyword>
+    <keyword>provision</keyword>
+    <keyword>meat and drink</keyword>
+    <keyword>idle people</keyword>
+    <keyword>the Poor</keyword>
+  </keywords>
+  <places>
+    <place>Scrooge's office</place>
+  </places>
+  <paragraph pageNumber="11">
+  
+	This lunatic, in letting Scrooge’s nephew out, had let two other people in. They were portly gentlemen, pleasant to behold, and now stood, with their hats off, in Scrooge’s office. They had books and papers in their hands, and bowed to him.
+	‘Scrooge and Marley’s, I believe,’ said one of the gentlemen, referring to his list. ‘Have I the pleasure of addressing Mr. Scrooge, or Mr. Marley?’
+	‘Mr. Marley has been dead these seven years,’ Scrooge replied. ‘He died seven years ago, this very night.’
+	‘We have no doubt his liberality is well represented by his surviving partner,’ said the gentleman, presenting his credentials.
+	It certainly was; for they had been two kindred spirits. At the ominous word ‘liberality,’ Scrooge frowned, and shook his head, and handed the credentials back.
+	‘At this festive season of the year, Mr. Scrooge,’ said the gentleman, taking up a pen, ‘it is more than usually desirable that we should make some slight provision for the Poor and Destitute, who suffer greatly at the present time. Many thousands are in want of common necessaries; hundreds of thousands are in want of common comforts, sir.’
+	‘Are there no prisons?’ asked Scrooge.
+	‘Plenty of prisons,’ said the gentleman, laying down the pen again.
+	‘And the Union workhouses?’ demanded Scrooge. ‘Are they still in operation?’
+	‘They are. Still,’ returned the gentleman, ‘I wish I could say they were not.’
+	‘The Treadmill and the Poor Law are in full vigour, then?’ said Scrooge.
+	‘Both very busy, sir.’
+	‘Oh! I was afraid, from what you said at first, that something had occurred to stop them in their useful course,’ said Scrooge. ‘I’m very glad to hear it.’
+	‘Under the impression that they scarcely furnish Christian cheer of mind or body to the multitude,’ returned the gentleman, ‘a few of us are endeavouring to raise a fund to buy the Poor some meat and drink. and means of warmth. We choose this time, because it is a time, of all others, when Want is keenly felt, and Abundance rejoices. What shall I put you down for?’
+	‘Nothing!’ Scrooge replied.
+	‘You wish to be anonymous?’
+	‘I wish to be left alone,’ said Scrooge. ‘Since you ask me what I wish, gentlemen, that is my answer. I don’t make merry myself at Christmas and I can’t afford to make idle people merry. I help to support the establishments I have mentioned — they cost enough; and those who are badly off must go there.’
+	‘Many can’t go there; and many would rather die.’
+	‘If they would rather die,’ said Scrooge, ‘they had better do it, and decrease the surplus population. Besides — excuse me — I don’t know that.’
+	‘But you might know it,’ observed the gentleman.
+	‘It’s not my business,’ Scrooge returned. ‘It’s enough for a man to understand his own business, and not to interfere with other people’s. Mine occupies me constantly. Good afternoon, gentlemen!’
+	Seeing clearly that it would be useless to pursue their point, the gentlemen withdrew. Scrooge returned his labours with an improved opinion of himself, and in a more facetious temper than was usual with him.
+
+  </paragraph>
+</situation>
+
+<situation>
+  <!-- Grigoruta G. Andrei Madalin -->
+  <name type="3">
+    Christmas Eve agitation
+  </name>
+  <players>
+    <player>Scrooge</player>
+    <player>people</player>
+    <player>labourers</player>
+    <player>men</player>
+    <player>the Lord Mayor</player>
+    <player>cooks</player>
+    <player>butlers</player>
+  </players>
+  <objects>
+    <object>fire</object>
+    <object>ancient tower</object>
+    <object>old bell</object>
+    <object>gas-pipes</object>
+    <object>brazier</object>
+    <object>water-plug</object>
+  </objects>
+  <events>
+    <!--verbs-->
+    <event>ran</event>
+    <event>had lighted</event>
+    <event>became intense</event>
+    <event>were repairing</event>
+    <event>warming</event>
+    <event>regale him</event>
+    <event>gathered</event>
+	<event>seized the ruler</event>
+	<event>fled in terror</event>
+  </events>
+  <keywords>
+    <keyword>brightness</keyword>
+    <keyword>a Christmas carol</keyword>
+	<keyword>the cold</keyword>
+    <keyword>windows</keyword>
+    <keyword>shops</keyword>
+    <keyword>pudding</keyword>
+	<keyword>pale faces</keyword>
+  </keywords>
+  <places>
+    <place>main street</place>
+    <place>Mansion House</place>
+    <place>Scrooge's keyhole</place>
+  </places>
+  <paragraph pageNumber="14">
+ 
+	Meanwhile the fog and darkness thickened so, that people ran about with flaring links, proffering their services to go before horses in carriages, and conduct them on their way. The ancient tower of a church, whose gruff old bell was always peeping slily down at Scrooge out of a Gothic window in the wall, became invisible, and struck the hours and quarters in the clouds, with tremulous vibrations afterwards as if its teeth were chattering in its frozen head up there. The cold became intense. In the main street at the corner of the court, some labourers were repairing the gas-pipes, and had lighted a great fire in a brazier, round which a party of ragged men and boys were gathered: warming their hands and winking their eyes before the blaze in rapture. The water-plug being left in solitude, its overflowing sullenly congealed, and turned to misanthropic ice. The brightness of the shops where holly
+	sprigs and berries crackled in the lamp heat of the windows, made pale faces ruddy as they passed. Poulterers’ and grocers’ trades became a splendid joke; a glorious pageant, with which it was next to impossible to believe that such dull principles as bargain and sale had anything to do. The Lord Mayor, in the stronghold of the mighty Mansion House, gave orders to his fifty cooks and butlers to keep Christmas as a Lord Mayor’s household should; and even the little tailor, whom he had fined five shillings on the previous Monday for being drunk and bloodthirsty in the streets, stirred up to-morrow’s pudding in his garret, while his lean wife and the baby sallied out to buy the beef.
+	Foggier yet, and colder! Piercing, searching, biting cold. If the good Saint Dunstan had but nipped the Evil Spirit’s nose with a touch of such weather as that, instead of using his familiar weapons, then indeed he would have roared to lusty purpose. The owner of one scant young nose, gnawed and mumbled by the hungry cold as bones are gnawed by dogs, stooped down at Scrooge’s keyhole to regale him with a Christmas carol: but at the first sound of
+	‘God bless you, merry gentleman! May nothing you dismay!’
+	Scrooge seized the ruler with such energy of action, that the singer fled in terror, leaving the keyhole to the fog and even more congenial frost.
+  
+  </paragraph>
+</situation>
+
+<situation>
+  <!-- Grigoruta G. Andrei Madalin -->
+  <name type="3">
+    Shutting up the counting-house
+  </name>
+  <players>
+    <player>Scrooge</player>
+    <player>clerk</player>
+  </players>
+  <objects>
+    <object>stool</object>
+    <object>candle</object>
+    <object>hat</object>
+    <object>office</object>
+    </objects>
+  <events>
+    <!--verbs-->
+    <event>want all day tomorrow</event>
+    <event>smiled faintly</event>
+    <event>promised</event>
+    <event>pay</event>
+  </events>
+  <keywords>
+    <keyword>half-a-crown</keyword>
+    <keyword>wages</keyword>
+  </keywords>
+  <places>
+    <place>the Tank</place>
+    <place>counting-house</place>
+  </places>
+  <paragraph pageNumber="16">
+
+     At length the hour of shutting up the counting- house arrived. With an ill-will Scrooge dismounted from his stool, and tacitly admitted the fact to the expectant clerk in the Tank, who instantly snuffed his candle out, and put on his hat.
+	‘You’ll want all day to-morrow, I suppose?’ said Scrooge.
+	‘If quite convenient, sir.’
+	‘It’s not convenient,’ said Scrooge, ‘and it’s not fair. If I was to stop half-a-crown for it, you’d think yourself ill-used, I’ll be bound?’
+	The clerk smiled faintly.
+	‘And yet,’ said Scrooge, ‘you don’t think me ill-used, when I pay a day’s wages for no work.’
+	The clerk observed that it was only once a year.
+	‘A poor excuse for picking a man’s pocket every twenty-fifth of December!’ said Scrooge, buttoning his great-coat to the chin. ‘But I suppose you must have the whole day. Be here all the earlier next morning.’
+	The clerk promised that he would; and Scrooge walked out with a growl. The office was closed in a twinkling,
+	and the clerk, with the long ends of his white comforter dangling below his waist (for he boasted no great-coat), went down a slide on Cornhill, at the end of a lane of boys, twenty times, in honour of its being Christmas Eve, and then ran home to Camden Town as hard as he could pelt, to play at blindman’s-buff.
+
+  </paragraph>
+</situation>
+
+<situation>
+  <!-- Grigoruta G. Andrei Madalin -->
+  <name type="3">
+    Scrooge goes home
+  </name>
+  <players>
+    <player>Scrooge</player>
+  </players>
+  <objects>
+    <object>newspapers</object>
+    <object>banker's book</object>
+    <object>bed</object>
+  </objects>
+  <events>
+    <!--verbs-->
+    <event>took</event>
+    <event>read</event>
+    <event>went</event>
+    <event>who knew</event>
+  </events>
+  <keywords>
+    <keyword>melancholy dinner</keyword>
+    <keyword>deceased partner</keyword>
+    <keyword>dreary</keyword>
+    <keyword>old</keyword>
+	  <keyword>the knocker</keyword>
+  </keywords>
+  <places>
+    <place>melancholy tavern</place>
+    <place>chambers</place>
+    <place>rooms</place>
+  </places>
+  <paragraph pageNumber="17">
+
+	Scrooge took his melancholy dinner in his usual melancholy tavern; and having read all the newspapers, and beguiled the rest of the evening with his banker’s-book, went home to bed. He lived in chambers which had once belonged to his deceased partner. They were a gloomy suite of rooms, in a lowering pile of building up a yard, where it had so little business to be, that one could scarcely help fancying it must have run there when it was a young house, playing at hide-and-seek with other houses, and forgotten the way out again. It was old enough now, and dreary enough, for nobody lived in it but Scrooge, the other rooms being all let out as offices. The yard was so dark that even Scrooge, who knew its every stone, was fain to grope with his hands. The fog and frost so hung about the black old gateway of the house, that it seemed as if the Genius of the Weather sat in mournful meditation on the threshold
+	Now, it is a fact, that there was nothing at all particular about the knocker on the door, except that it was very large. It is also a fact, that Scrooge had seen it, night and morning, during his whole residence in that place; also that Scrooge had as little of what is called fancy about him as any man in the city of London, even including — which is a bold word — the corporation, aldermen, and livery.    
+
+  </paragraph>
+</situation>
+
+<!--Chapter 2-->
+
+<situation>
+  <!--Lungu D. Catalin Iliuta-->
+    <name type="5">Scrooge wakes up</name>
+    <players>
+      <player>Scrooge</player>
+    </players>
+    <objects>
+      <object>bed</object>
+      <object>window</object>
+      <object>walls</object>
+      <object>chamber</object>
+    </objects>
+    <events>
+      <event>Scrooge awoke</event>
+      <event>looking out of bed</event>
+      <event>He was endeavouring to pierce the darkness</event>
+      <event>he listened for the hour</event>
+    </events>
+    <keywords>
+      <keyword>awoke</keyword>
+      <keyword>dark</keyword>
+      <keyword>bed</keyword>
+      <keyword>chamber</keyword>
+      <keyword>hour</keyword>
+      <keyword>listened</keyword>
+    </keywords>
+    <places>
+      <place>chamber</place>
+    </places>
+    <paragraph pageNumber="34">
+
+      When Scrooge awoke, it was so dark, that looking out
+      of bed, he could scarcely distinguish the transparent
+      window from the opaque walls of his chamber. He was 
+      endeavouring to pierce the darkness with his ferret eyes,
+      when the chimes of a neighbouring church struck the four 
+      quarters. So he listened for the hour.
+
+    </paragraph>
+  </situation>
+
+  <situation>
+    <!--Lungu D. Catalin Iliuta-->
+    <name type="2">
+      ghost visit
+    </name>
+    <players>
+      <player>Scrooge</player>
+      <player>ghost</player>
+    </players>
+    <objects>
+      <object>bell</object>
+      <object>clock</object>
+      <object>curtains</object>
+      <object>bed</object>
+    </objects>
+    <events>
+      <event>Scrooge lay in this state</event>
+      <event>he remembered</event>
+      <event>bell tolled one</event>
+      <event>lie awake</event>
+      <event>listening</event>
+      <event>were drawn</event>
+      <event>Light flashed</event>
+      <event>spoke</event>
+      <event>bell sounded</event>
+    </events>
+    <keywords>
+      <keyword>ghost</keyword>
+      <keyword>bell</keyword>
+      <keyword>clock</keyword>
+      <keyword>sleep</keyword>
+      <keyword>remembered</keyword>
+      <keyword>lay</keyword>
+      <keyword>hour</keyword>
+      <keyword>light</keyword>
+      <keyword>visitor</keyword>
+      <keyword>unearthly</keyword>
+      <keyword>quarter</keyword>
+      <keyword>sounded</keyword>
+    </keywords>
+    <places>
+      <place>room</place>
+    </places>
+    <paragraph pageNumber="35">
+   
+      Scrooge lay in this state until the chime had gone
+      three-quarters more, when he remembered, on a sudden,
+      that the Ghost hadwarned him of a visitation when the
+      bell tolled one. He resolved to lie awake until the hour
+      was passed; and, considering that he could no more go to
+      sleep than go to heaven, this was, perhaps, the wisest 
+      resolution in his power.
+        The quarter was so long, that he was more than once 
+      convinced he must have sunk into a doze unconsciously, 
+      and missed the clock. At length it broke upon his listening
+      ear.
+        'Ding, dong!'
+        'A quarter past,' said Scrooge, counting.
+        'Ding, dong!'
+        'Half past,' said Scrooge.
+        'Ding, dong!'
+        'A quarter to it,' said Scrooge. 'Ding, dong!'
+        'The hour itself,' said Scrooge triumphantly, 
+      'and nothing else!'
+        He spoke before the hour bell sounded, which it now
+      did with a deep, dull, hollow, melancholy ONE. Light 
+      flashed up in the room upon the instant, and the curtains
+      of his bed were drawn.
+        The curtains of his bed were drawn aside, I tell you, by
+      a hand. Not the curtains at his feet, nor the curtains at his
+      back, but those to which his face was addressed. The 
+      curtains of his bed were drawn aside; and Scrooge, starting
+      up into a half-recumbent attitude, found himself face to
+      face with the unearthly visitor who drew them: as close to
+      it as I am now to you, and I am standing in the spirit at
+      your elbow.
+  
+    </paragraph>
+  </situation>
+
+  <situation>
+    <!--Lungu D. Catalin Iliuta-->
+    <name type="2">
+      ghost shows Scrooge the native place
+    </name>
+    <players>
+      <player>Scrooge</player>
+      <player>ghost</player>
+      <player>ponies</player>
+      <player>boys</player>
+    </players>
+    <objects>
+      <object>bed</object>
+      <object>window</object>
+      <object>wall</object>
+    </objects>
+    <events>
+      <event>Rise. and walk with me</event>
+      <event>Scrooge to plead that the weather and the hour were not adapted</event>
+      <event>touch of my hand there</event>
+      <event>passed through the wall</event>
+      <event>lip is trembling</event>
+      <event>shaggy ponies now were seen trotting towards</event>
+      <event>Scrooge knew and named them every one</event>
+    </events>
+    <keywords>
+      <keyword>rise</keyword>
+      <keyword>walk</keyword>
+      <keyword>weather</keyword>
+      <keyword>plead</keyword>
+      <keyword>hand</keyword>
+      <keyword>touch</keyword>
+      <keyword>city</keyword>
+      <keyword>vanished</keyword>
+      <keyword>looked</keyword>
+      <keyword>recognising</keyword>
+      <keyword>ponies</keyword>
+      <keyword>knew</keyword>
+    </keywords>
+    <places>
+      <place>room</place>
+      <place>road</place>
+    </places>
+    <paragraph pageNumber="39">
+
+        'Rise. and walk with me.'
+      It would have been in vain for Scrooge to plead that the weather and the hour were not adapted to pedestrian purposes; that bed was warm, and the thermometer a long way below freezing; that he was clad but lightly in his slippers, dressing-gown, and nightcap; and that he had a cold upon him at that time. The grasp, though gentle as a
+      eBook brought to you by
+      Create, view, and edit PDF. Download the free trial version.
+      A Christmas Carol
+      40 of 138
+      woman's hand, was not to be resisted. He rose: but finding that the Spirit made towards the window, clasped his robe in supplication.
+      'I am mortal,' Scrooge remonstrated, 'and liable to fall.'
+      'Bear but a touch of my hand there,' said the Spirit, laying it upon his heart,' and you shall be upheld in more than this.'
+      As the words were spoken, they passed through the wall, and stood upon an open country road, with fields on either hand. The city had entirely vanished. Not a vestige of it was to be seen. The darkness and the mist had vanished with it, for it was a clear, cold, winter day, with snow upon the ground.
+      'Good Heaven!' said Scrooge, clasping his hands together, as he looked about him. 'I was bred in this place. I was a boy here.'
+      The Spirit gazed upon him mildly. Its gentle touch, though it had been light and instantaneous, appeared still present to the old man's sense of feeling. He was conscious of a thousand odours floating in the air, each one connected with a thousand thoughts, and hopes, and joys, and cares long, long, forgotten.
+      'Your lip is trembling,' said the Ghost. 'And what is that upon your cheek.'
+      A Christmas Carol
+      41 of 138
+      Scrooge muttered, with an unusual catching in his voice, that it was a pimple; and begged the Ghost to lead him where he would.
+      'You recollect the way.' inquired the Spirit.
+      'Remember it.' cried Scrooge with fervour; 'I could walk it blindfold.'
+      'Strange to have forgotten it for so many years.' observed the Ghost. 'Let us go on.'
+      They walked along the road, Scrooge recognising every gate, and post, and tree; until a little market-town appeared in the distance, with its bridge, its church, and winding river. Some shaggy ponies now were seen trotting towards them with boys upon their backs, who called to other boys in country gigs and carts, driven by farmers. All these boys were in great spirits, and shouted to each other, until the broad fields were so full of merry music, that the crisp air laughed to hear it.
+      'These are but shadows of the things that have been,' said the Ghost. 'They have no consciousness of us.'
+      The jocund travellers came on; and as they came, Scrooge knew and named them every one. Why was he rejoiced beyond all bounds to see them. Why did his cold eye glisten, and his heart leap up as they went past. Why was he filled with gladness when he heard them give each
+      other Merry Christmas, as they parted at cross-roads and bye-ways, for their several homes. What was merry Christmas to Scrooge. Out upon merry Christmas. What good had it ever done to him.
+
+    </paragraph>
+  </situation>
+
+  <situation>
+    <!--Lungu D. Catalin Iliuta-->
+    <name type="2">
+      Christmas at Fezziwig's warehouse
+    </name>
+    <players>
+      <player>ghost</player>
+      <player>Scrooge</player>
+      <player>Fezziwig</player>
+      <player>Dick Wilkins</player>
+      <player>fiddler</player>
+      <player>Mrs Fezziwig</player>
+      <player>Miss Fezziwigs</player>
+      <player>men</player>
+      <player>women</player>
+      <player>housemaid</player>
+      <player>baker</player>
+      <player>cook</player>
+      <player>milkman</player>
+    </players>
+    <objects>
+      <object>door</object>
+      <object>pen</object>
+      <object>clock</object>
+      <object>shutters</object>
+      <object>music-book</object>
+    </objects>
+    <events>
+      <event>stopped at a certain warehouse door</event>
+      <event>Old Fezziwig laid down his pen</event>
+      <event>cleared away</event>
+      <event>the floor was swept and watered</event>
+      <event>In came a fiddler with a music-book</event>
+      <event>In came</event>
+      <event>were more dances</event>
+      <event>old Fezziwig stood out to dance with Mrs Fezziwig</event>
+      <event>clock struck eleven</event>
+      <event>wished him or her a Merry Christmas</event>
+    </events>
+    <keywords>
+      <keyword>warehouse</keyword>
+      <keyword>apprenticed</keyword>
+      <keyword>Christmas Eve</keyword>
+      <keyword>old</keyword>
+      <keyword>shutters</keyword>
+      <keyword>street</keyword>
+      <keyword>music</keyword>
+      <keyword>fiddler</keyword>
+      <keyword>orchestra</keyword>
+      <keyword>employed</keyword>
+      <keyword>young</keyword>
+      <keyword>came</keyword>
+      <keyword>couples</keyword>
+      <keyword>round</keyword>
+      <keyword>dance</keyword>
+      <keyword>cake</keyword>
+      <keyword>Cold Roast</keyword>
+      <keyword>Cold Boiled</keyword>
+      <keyword>beer</keyword>
+      <keyword>partners</keyword>
+      <keyword>clock</keyword>
+    </keywords>
+    <places>
+      <place>warehouse</place>
+    </places>
+    <paragraph pageNumber="48">
+
+      The Ghost stopped at a certain warehouse door, 
+    and asked Scrooge if he knew it.
+      'Know it.' said Scrooge. 'I was apprenticed here.'
+      They went in. At sight of an old gentleman in a Welsh
+    wig, sitting behind such a high desk, that if he had been
+    two inches taller he must have knocked his head against 
+    the ceiling, Scrooge cried in great excitement:
+      'Why, it's old Fezziwig. Bless his heart; it's Fezziwig alive again.'
+      Old Fezziwig laid down his pen, and looked up at the
+    clock, which pointed to the hour of seven. He rubbed his
+    hands; adjusted his capacious waistcoat; laughed all over
+    himself, from his shows to his organ of benevolence; and
+    called out in a comfortable, oily, rich, fat, jovial voice:
+      'Yo ho, there. Ebenezer. Dick.'
+      Scrooge's former self, now grown a young man, came
+    briskly in, accompanied by his fellow-prentice.
+      'Dick Wilkins, to be sure.' said Scrooge to the Ghost. 
+    'Bless me, yes. There he is. He was very much attached to 
+    me, was Dick. Poor Dick. Dear, dear.'
+    'Yo ho, my boys.' said Fezziwig. 'No more work to-night. 
+    Christmas Eve, Dick. Christmas, Ebenezer. Let's have the
+    shutters up,' cried old Fezziwig, with a sharp clap of his
+    hands,' before a man can say Jack Robinson.'
+      You wouldn't believe how those two fellows went at
+    it. They charged into the street with the shutters - one,
+    two, three - had them up in their places - four, five, six
+    - barred them and pinned then - seven, eight, nine - 
+    and came back before you could have got to twelve,
+    panting like race-horses.
+      'Hilli-ho!' cried old Fezziwig, skipping down from the
+    high desk, with wonderful agility. 'Clear away, my lads,
+    and let's have lots of room here. Hilli-ho, Dick. Chirrup,
+    Ebenezer.'
+      Clear away. There was nothing they wouldn't have 
+    cleared away, or couldn't have cleared away, with old
+    Fezziwig looking on. It was done in a minute. Every 
+    movable was packed off, as if it were dismissed from
+    public life for evermore; the floor was swept and watered,
+    the lamps were trimmed, fuel was heaped upon the fire; and
+    the warehouse was as snug, and warm, and dry, and bright a
+    ball-room, as you would desire to see upon a winter's night.
+      In came a fiddler with a music-book, and went up to 
+    the lofty desk, and made an orchestra of it, and tuned like 
+    fifty stomach-aches. In came Mrs Fezziwig, one vast 
+    substantial smile. In came the three Miss Fezziwigs, 
+    beaming and lovable. In came the six young followers 
+    whose hearts they broke. In came all the young men and 
+    women employed in the business. In came the housemaid, 
+    with her cousin, the baker. In came the cook, with her 
+    brother's particular friend, the milkman. In came the boy
+    from over the way, who was suspected of not having 
+    board enough from his master; trying to hide himself 
+    behind the girl from next door but one, who was proved 
+    to have had her ears pulled by her mistress. In they all
+    came, one after another; some shyly, some boldly, some 
+    gracefully, some awkwardly, some pushing, some pulling; 
+    in they all came, anyhow and everyhow. Away they all 
+    went, twenty couples at once; hands half round and back 
+    again the other way; down the middle and up again; 
+    round and round in various stages of affectionate grouping; 
+    old top couple always turning up in the wrong place; new 
+    top couple starting off again, as soon as they got there; all
+    top couples at last, and not a bottom one to help them. 
+    When this result was brought about, old Fezziwig, 
+    clapping his hands to stop the dance, cried out,' Well 
+    done.' and the fiddler plunged his hot face into a pot of 
+    porter, especially provided for that purpose. But scorning 
+    rest, upon his reappearance, he instantly began again, 
+    though there were no dancers yet, as if the other fiddler 
+    had been carried home, exhausted, on a shutter, and he 
+    were a bran-new man resolved to beat him out of sight, or perish.
+      There were more dances, and there were forfeits, and 
+    more dances, and there was cake, and there was negus, 
+    and there was a great piece of Cold Roast, and there was 
+    a great piece of Cold Boiled, and there were mince-pies, 
+    and plenty of beer. But the great effect of the evening 
+    came after the Roast and Boiled, when the fiddler (an
+    artful dog, mind. The sort of man who knew his business 
+    better than you or I could have told it him.) struck up Sir 
+    Roger de Coverley.' Then old Fezziwig stood out to 
+    dance with Mrs Fezziwig. Top couple, too; with a good 
+    stiff piece of work cut out for them; three or four and 
+    twenty pair of partners; people who were not to be trifled 
+    with; people who would dance, and had no notion of walking.
+      But if they had been twice as many - ah, four times 
+    - old Fezziwig would have been a match for them, and 
+    so would Mrs Fezziwig. As to her, she was worthy to be 
+    his partner in every sense of the term. If that's not high 
+    praise, tell me higher, and I'll use it. A positive light 
+    appeared to issue from Fezziwig's calves. They shone in 
+    every part of the dance like moons. You couldn't have 
+    predicted, at any given time, what would have become of 
+    them next. And when old Fezziwig and Mrs Fezziwig had 
+    gone all through the dance; advance and retire, both hands 
+    to your partner, bow and curtsey, corkscrew, thread-the-needle,
+    and back again to your place; Fezziwig cut - cut so deftly, that
+    he appeared to wink with his legs, and came upon his feet again 
+    without a stagger.
+      When the clock struck eleven, this domestic ball broke up. 
+    Mr and Mrs Fezziwig took their stations, one on either side 
+    of the door, and shaking hands with every person individually 
+    as he or she went out, wished him or her a Merry Christmas. 
+    When everybody had retired but the two prentices, they did 
+    the same to them; and thus the cheerful voices died away, 
+    and the lads were left to their beds; which were under a 
+    counter in the back-shop.
+
+    </paragraph>
+  </situation>
+
+  <situation>
+    <!--Lungu D. Catalin Iliuta-->
+    <name type="2">
+      Scrooge back in his bed
+    </name>
+    <players>
+      <player>Scrooge</player>
+      <player>ghost</player>
+    </players>
+    <objects>
+      <object>extinguisher</object>
+    </objects>
+    <events>
+      <event>Take me back</event>
+      <event>light was burning high and bright</event>
+      <event>He was conscious of being exhausted</event>
+      <event>he sank into a heavy sleep</event>
+    </events>
+    <keywords>
+      <keyword>struggle</keyword>
+      <keyword>haunt</keyword>
+      <keyword>resistance</keyword>
+      <keyword>light</keyword>
+      <keyword>influence</keyword>
+      <keyword>sleep</keyword>
+      <keyword>extinguisher</keyword>
+      <keyword>exhausted</keyword>
+    </keywords>
+    <places>
+      <place>bedroom</place>
+    </places>
+    <paragraph pageNumber="61">
+
+      'Leave me. Take me back. Haunt me no longer.'
+      In the struggle, if that can be called a struggle in which
+    the Ghost with no visible resistance on its own part was 
+    undisturbed by any effort of its adversary, Scrooge 
+    observed that its light was burning high and bright; and 
+    dimly connecting that with its influence over him, he
+    seized the extinguisher-cap, and by a sudden action 
+    pressed it down upon its head.
+      The Spirit dropped beneath it, so that the extinguisher 
+    covered its whole form; but though Scrooge pressed it 
+    down with all his force, he could not hide the light, which 
+    streamed from under it, in an unbroken flood upon the ground.
+      He was conscious of being exhausted, and overcome by 
+    an irresistible drowsiness; and, further, of being in his own 
+    bedroom. He gave the cap a parting squeeze, in which his 
+    hand relaxed; and had barely time to reel to bed, before he 
+    sank into a heavy sleep.
+
+    </paragraph>
+  </situation>
+
+<!--Chapter 3-->
+
+<situation>
+  <!--Dragomir S. Tiberiu-->
+  <name type="5">
+    awaking
+  </name>
+  <players>
+    <player>Scrooge</player>
+    <player>Ghost</player>
+  </players>
+  <objects>
+    <object>bed</object>
+    <object>bell</object>
+    <object>curtains</object>
+    <object>light</object>
+        <object>voice</object>
+        <object>door</object>
+  </objects>
+  <events> <!--verbs-->
+    <event>turned uncomfortably cold</event>
+    <event>put them every one aside</event>
+    <event>the Bell struck One</event>
+    <event>lay upon his bed</event>
+    <event>shuffled in his slippers to the door</event>
+    <event>called him by his name</event>
+    <event>enter</event>
+  </events>
+  <keywords>
+    <keyword>bell</keyword>
+    <keyword>bed</keyword>
+    <keyword>light</keyword>
+    <keyword>hand</keyword>
+    <keyword>lock</keyword>
+    <keyword>voice</keyword>
+    <keyword>room</keyword>
+    <keyword>walls</keyword>
+    <keyword>ceiling</keyword>
+    <keyword>holly,</keyword>
+    <keyword>mistletoe</keyword>
+    <keyword>ivy</keyword>
+  </keywords>
+  <places>
+    <place>room</place>
+  </places>
+  <paragraph pageNumber="63">
+
+Awaking in the middle of a prodigiously tough snore, and sitting up in bed to get his thoughts together, Scrooge had no occasion to be told that the bell was again upon the stroke of One. He felt that he was restored to consciousness in the right nick of time, for the especial purpose of holding a conference with the second messenger despatched to him through Jacob Marley’s intervention. But, finding that he turned uncomfortably cold when he began to wonder which of his curtains this new spectre would draw back, he put them every one aside with his own hands, and lying down again, established a sharp look-out all round the bed. For, he wished to challenge the Spirit on the moment of its appearance, and did not wish to be taken by surprise, and made nervous.
+Gentlemen of the free-and-easy sort, who plume themselves on being acquainted with a move or two, and being usually equal to the time-of-day, express the wide range of their capacity for adventure by observing that they are good for anything from pitch-and-toss to manslaughter; between which opposite extremes, no doubt, there lies a tolerably wide and comprehensive range of subjects. Without venturing for Scrooge quite as hardily as this, I don’t mind calling on you to believe that he was ready for a good broad field of strange appearances, and that nothing between a baby and rhinoceros would have astonished him very much.
+Now, being prepared for almost anything, he was not by any means prepared for nothing; and, consequently, when the Bell struck One, and no shape appeared, he was taken with a violent fit of trembling. Five minutes, ten minutes, a quarter of an hour went by, yet nothing came. All this time, he lay upon his bed, the very core and centre of a blaze of ruddy light, which streamed upon it when the clock proclaimed the hour; and which, being only light, was more alarming than a dozen ghosts, as he was powerless to make out what it meant, or would be at; and was sometimes apprehensive that he might be at that very moment an interesting case of spontaneous combustion, without having the consolation of knowing it. At last, however, he began to think — as you or I would have thought at first; for it is always the person not in the predicament who knows what ought to have been done in it, and would unquestionably have done it too — at last, I say, he began to think that the source and secret of this
+ghostly light might be in the adjoining room, from whence, on further tracing it, it seemed to shine. This idea taking full possession of his mind, he got up softly and shuffled in his slippers to the door.
+The moment Scrooge’s hand was on the lock, a strange voice called him by his name, and bade him enter. He obeyed.
+It was his own room. There was no doubt about that. But it had undergone a surprising transformation. The walls and ceiling were so hung with living green, that it looked a perfect grove; from every part of which, bright gleaming berries glistened. The crisp leaves of holly, mistletoe, and ivy reflected back the light, as if so many little mirrors had been scattered there; and such a mighty blaze went roaring up the chimney, as that dull petrification of a hearth had never known in Scrooge’s time, or Marley’s, or for many and many a winter season gone. Heaped up on the floor, to form a kind of throne, were turkeys, geese, game, poultry, brawn, great joints of meat, sucking-pigs, long wreaths of sausages, mince-pies, plum-puddings, barrels of oysters, red-hot chestnuts, cherry-cheeked apples, juicy oranges, luscious pears, immense twelfth-cakes, and seething bowls of punch, that made the chamber dim with their delicious steam. In easy
+state upon this couch, there sat a jolly Giant, glorious to see, who bore a glowing torch, in shape not unlike Plenty’s horn, and held it up, high up, to shed its light on Scrooge, as he came peeping round the door.
+‘Come in.’ exclaimed the Ghost. ‘Come in, and know me better, man.’
+Scrooge entered timidly, and hung his head before this Spirit. He was not the dogged Scrooge he had been; and though the Spirit’s eyes were clear and kind, he did not like to meet them.
+‘I am the Ghost of Christmas Present,’ said the Spirit. ‘Look upon me.’
+
+  </paragraph>
+</situation>
+
+<situation>
+  <!--Dragomir S. Tiberiu-->
+  <name tye="1">
+    Spirit smiled, and stopped to bless Bob Cratchit’s dwelling
+  </name>
+  <players>
+    <player>Scrooge</player>
+    <player>Spririt</player>
+    <player>Bob Cratchit</player>
+    <player>Mrs Cratchit</player>
+    <player>Tiny Tim</player>
+    <player>little Cratchits</player>
+  </players>
+  <objects>
+    <object>fork</object>
+    <object>saucepan</object>   
+    <object>potatoes</object>   
+    <object>table</object>
+    <object>fire</object>
+    <object>bonnet</object>
+    <object>shawl</object>
+    <object>closet door</object>
+    <object>jug</object>
+    <object>gin</object>
+    <object>lemons</object>
+    <object>plates</object>
+    <object>carving-knife</object>
+  </objects>
+  <events> <!--verbs-->
+    <event>plunged a fork</event>
+    <event>danced about the table</event>
+    <event>blew the fire</event>
+    <event>knocked loudly at the saucepan-lid</event>
+    <event>taking off her shawl and bonnet</event>
+    <event>came out prematurely from behind the closet door</event>
+    <event>stirred it round and round and put it on the hob</event>
+    <event>mashed the potatoes</event>
+    <event>dusted the hot plates</event>
+    <event>plunge it in the breast</event>
+  </events>
+  <keywords>
+    <keyword>torch</keyword>
+    <keyword>dwelling</keyword>
+    <keyword>goose,</keyword>
+    <keyword>table</keyword>
+    <keyword>stool</keyword>
+    <keyword>couch</keyword>
+    <keyword>ghost</keyword>
+    <keyword>fire</keyword>
+    <keyword>said</keyword>
+    <keyword>spoke</keyword>
+    <keyword>told</keyword>
+  </keywords>
+  <places>
+    <place>dwelling</place>
+  </places>
+  <paragraph pageNumber="74">
+
+  And perhaps it was the pleasure the good Spirit had in showing off this power of his, or else it was his own kind, generous, hearty nature, and his sympathy with all poor men, that led him straight to Scrooge’s clerk’s; for there he went, and took Scrooge with him, holding to his robe; and on the threshold of the door the Spirit smiled, and stopped to bless Bob Cratchit’s dwelling with the sprinkling of his torch. Think of that. Bob had but fifteen bob a-week himself; he pocketed on Saturdays but fifteen copies of his Christian name; and yet the Ghost of Christmas Present blessed his four-roomed house.
+Then up rose Mrs Cratchit, Cratchit’s wife, dressed out but poorly in a twice-turned gown, but brave in ribbons, which are cheap and make a goodly show for sixpence; and she laid the cloth, assisted by Belinda Cratchit, second of her daughters, also brave in ribbons; while Master Peter Cratchit plunged a fork into the saucepan of potatoes, and getting the corners of his monstrous shirt collar (Bob’s private property, conferred upon his son and heir in honour of the day) into his mouth, rejoiced to find himself so gallantly attired, and yearned to show his linen in the fashionable Parks. And now two smaller Cratchits, boy and girl, came tearing in, screaming that outside the baker’s they had smelt the goose, and known it for their
+own; and basking in luxurious thoughts of sage and onion, these young Cratchits danced about the table, and exalted Master Peter Cratchit to the skies, while he (not proud, although his collars nearly choked him) blew the fire, until the slow potatoes bubbling up, knocked loudly at the saucepan-lid to be let out and peeled.
+‘What has ever got your precious father then.’ said Mrs Cratchit. ‘And your brother, Tiny Tim. And Martha warn’t as late last Christmas Day by half-an-hour.’
+‘Here’s Martha, mother.’ said a girl, appearing as she spoke.
+‘Here’s Martha, mother.’ cried the two young Cratchits. ‘Hurrah. There’s such a goose, Martha.’
+‘Why, bless your heart alive, my dear, how late you are.’ said Mrs Cratchit, kissing her a dozen times, and taking off her shawl and bonnet for her with officious zeal.
+‘We’d a deal of work to finish up last night,’ replied the girl,’ and had to clear away this morning, mother.’
+‘Well. Never mind so long as you are come,’ said Mrs Cratchit. ‘Sit ye down before the fire, my dear, and have a warm, Lord bless ye.’
+‘No, no. There’s father coming,’ cried the two young Cratchits, who were everywhere at once. ‘Hide, Martha, hide.’
+So Martha hid herself, and in came little Bob, the father, with at least three feet of comforter exclusive of the fringe, hanging down before him; and his threadbare clothes darned up and brushed, to look seasonable; and Tiny Tim upon his shoulder. Alas for Tiny Tim, he bore a little crutch, and had his limbs supported by an iron frame.
+‘Why, where’s our Martha.’ cried Bob Cratchit, looking round.
+‘Not coming,’ said Mrs Cratchit.
+‘Not coming.’ said Bob, with a sudden declension in his high spirits; for he had been Tim’s blood horse all the way from church, and had come home rampant. ‘Not coming upon Christmas Day.’
+Martha didn’t like to see him disappointed, if it were only in joke; so she came out prematurely from behind the closet door, and ran into his arms, while the two young Cratchits hustled Tiny Tim, and bore him off into the wash-house, that he might hear the pudding singing in the copper.
+‘And how did little Tim behave. asked Mrs Cratchit, when she had rallied Bob on his credulity, and Bob had hugged his daughter to his heart’s content.
+‘As good as gold,’ said Bob,’ and better. Somehow he gets thoughtful, sitting by himself so much, and thinks the
+strangest things you ever heard. He told me, coming home, that he hoped the people saw him in the church, because he was a cripple, and it might be pleasant to them to remember upon Christmas Day, who made lame beggars walk, and blind men see.’
+Bob’s voice was tremulous when he told them this, and trembled more when he said that Tiny Tim was growing strong and hearty.
+His active little crutch was heard upon the floor, and back came Tiny Tim before another word was spoken, escorted by his brother and sister to his stool before the fire; and while Bob, turning up his cuffs — as if, poor fellow, they were capable of being made more shabby — compounded some hot mixture in a jug with gin and lemons, and stirred it round and round and put it on the hob to simmer; Master Peter, and the two ubiquitous young Cratchits went to fetch the goose, with which they soon returned in high procession.
+Such a bustle ensued that you might have thought a goose the rarest of all birds; a feathered phenomenon, to which a black swan was a matter of course — and in truth it was something very like it in that house. Mrs Cratchit made the gravy (ready beforehand in a little saucepan) hissing hot; Master Peter mashed the potatoes with
+incredible vigour; Miss Belinda sweetened up the apple-sauce; Martha dusted the hot plates; Bob took Tiny Tim beside him in a tiny corner at the table; the two young Cratchits set chairs for everybody, not forgetting themselves, and mounting guard upon their posts, crammed spoons into their mouths, lest they should shriek for goose before their turn came to be helped. At last the dishes were set on, and grace was said. It was succeeded by a breathless pause, as Mrs Cratchit, looking slowly all along the carving-knife, prepared to plunge it in the breast; but when she did, and when the long expected gush of stuffing issued forth, one murmur of delight arose all round the board, and even Tiny Tim, excited by the two young Cratchits, beat on the table with the handle of his knife, and feebly cried Hurrah.
+There never was such a goose. Bob said he didn’t believe there ever was such a goose cooked. Its tenderness and flavour, size and cheapness, were the themes of universal admiration. Eked out by apple-sauce and mashed potatoes, it was a sufficient dinner for the whole family; indeed, as Mrs Cratchit said with great delight (surveying one small atom of a bone upon the dish), they hadn’t ate it all at last. Yet every one had had enough, and the youngest Cratchits in particular, were steeped in sage and
+onion to the eyebrows. But now, the plates being changed by Miss Belinda, Mrs Cratchit left the room alone — too nervous to bear witnesses — to take the pudding up and bring it in.
+
+  </paragraph>
+</situation>
+
+<!--Chapter 5-->
+
+<situation>
+  <!--Lefter E. Bogdan-->
+  <name type="5">
+    scrambled out of bed
+  </name>
+  <players>
+    <player>Scrooge</player>
+  </players>
+  <objects>
+    <object>bed</object>
+    <object>room</object>
+    <object>garments</object>
+    <object>sitting-room</object>
+  </objects>
+  <events> <!--actions-->
+    <event>scrambled out</event>
+    <event>sobbing</event>
+    <event>folding</event>
+    <event>turning</event>
+    <event>putting</event>
+    <event>tearing</event>
+    <event>mislaying</event>
+    <event>making</event>
+    <event>frisked</event>
+  </events>
+  <keywords>
+    <keyword>bed-curtains</keyword>
+    <keyword>bedpost</keyword>
+    <keyword>stockings</keyword>
+  </keywords>
+  <places>
+    <place>room</place>
+  </places>
+  <paragraph pageNumber="127">
+
+      Yes! and the bedpost was his own. The bed was his own, the room was his own. Best and happiest of all, the Time before him was his own, to make amends in!
+      I will live in the Past, the Present, and the Future. Scrooge repeated, as he scrambled out of bed. The Spirits of all Three shall strive within me. Oh Jacob Marley. Heaven, and the Christmas Time be praised for this. I say it on my knees, old Jacob, on my knees.
+      He was so fluttered and so glowing with his good intentions, that his broken voice would scarcely answer to his call. He had been sobbing violently in his conflict with the Spirit, and his face was wet with tears.
+      'They are not torn down. cried Scrooge, folding one of his bed-curtains in his arms, they are not torn down, rings and all. They are here  I am here  the shadows of the things that would have been, may be dispelled. They will be. I know they will.
+      His hands were busy with his garments all this time; turning them inside out, putting them on upside down, tearing them, mislaying them, making them parties to every kind of extravagance. 
+      I dont know what to do. cried Scrooge, laughing and crying in the same breath; and making a perfect Laocoon of himself with his stockings. I am as light as a feather, I am as happy as an angel, I am as merry as a schoolboy. I am as giddy as a drunken man. A merry Christmas to everybody. A happy New Year to all the world. Hallo here. Whoop. Hallo.
+      He had frisked into the sitting-room, and was now standing there: perfectly winded.
+      Theres the saucepan that the gruel was in. cried Scrooge, starting off again, and going round the fireplace. Theres the door, by which the Ghost of Jacob Marley entered. Theres the corner where the Ghost of Christmas Present, sat. Theres the window where I saw the wandering Spirits. Its all right, its all true, it all happened. Ha ha ha.
+      Really, for a man who had been out of practice for so many years, it was a splendid laugh, a most illustrious laugh. The father of a long, long line of brilliant laughs.
+      I dont know what day of the month it is. said Scrooge. I dont know how long Ive been among the Spirits. I dont know anything. Im quite a baby. Never mind. I dont care. Id rather be a baby. Hallo. Whoop. Hallo here.
+      He was checked in his transports by the churches ringing out the lustiest peals he had ever heard. Clash, clang, hammer; ding, dong, bell. Bell, dong, ding; hammer, clang, clash. Oh, glorious, glorious.
+
+  </paragraph>
+</situation>
+
+<situation>
+  <!--Lefter E. Bogdan-->
+  <name type="3">
+    running to the window
+  </name>
+  <players>
+    <player>Scrooge</player>
+    <player>a boy</player>
+  </players>
+  <objects>
+    <object>window</object>
+  </objects>
+  <events> <!--actions-->
+    <event>calling</event>
+    <event>running</event>
+    <event>opened</event>
+    <event>inquired</event>
+  </events>
+  <keywords>
+    <keyword>no fog</keyword>
+    <keyword>no mist</keyword>
+    <keyword>clear</keyword>
+    <keyword>bright</keyword>
+    <keyword>jovial</keyword>
+    <keyword>stirring</keyword>
+    <keyword>cold</keyword>
+    <keyword>street</keyword>
+  </keywords>
+  <places>
+    <place>street</place>
+  </places>
+  <paragraph pageNumber="129">
+
+      Running to the window, he opened it, and put out his head. No fog, no mist; clear, bright, jovial, stirring, cold; cold, piping for the blood to dance to; Golden sunlight; Heavenly sky; sweet fresh air; merry bells. Oh, glorious. Glorious.
+      Whats to-day. cried Scrooge, calling downward to a boy in Sunday clothes, who perhaps had loitered in to look about him.
+      Eh. returned the boy, with all his might of wonder.
+      Whats to-day, my fine fellow. said Scrooge.
+      To-day. replied the boy. Why, Christmas Day.
+      Its Christmas Day. said Scrooge to himself. I havent missed it. The Spirits have done it all in one night. They can do anything they like. Of course they can. Of course they can. Hallo, my fine fellow.
+      Hallo. returned the boy.
+      Do you know the Poulterers, in the next street but one, at the corner. Scrooge inquired.
+      I should hope I did, replied the lad.
+      An intelligent boy. said Scrooge. A remarkable boy. Do you know whether theyve sold the prize Turkey that was hanging up there  Not the little prize Turkey: the big one.
+      What, the one as big as me. returned the boy.
+      What a delightful boy. said Scrooge. Its a pleasure to talk to him. Yes, my buck.
+      Its hanging there now, replied the boy.
+      Is it. said Scrooge. Go and buy it.
+      Walk-er. exclaimed the boy.
+      No, no, said Scrooge, I am in earnest. Go and buy it, and tell them to bring it here, that I may give them the direction where to take it. Come back with the man, and Ill give you a shilling. Come back with him in less than five minutes and Ill give you half-a-crown.
+      The boy was off like a shot. He must have had a steady hand at a trigger who could have got a shot off half so fast.
+      Ill send it to Bon Cratchits. whispered Scrooge, rubbing his hands, and splitting with a laugh. He shant know who sends it. Its twice the size of Tiny Tim. Joe Miller never made such a joke as sending it to Bobs will be.
+
+  </paragraph>
+</situation>
+
+<situation>
+    <!--Lefter E. Bogdan-->
+  <name type="3">
+    went down-stairs
+  </name>
+  <players>
+    <player>Scourge</player>
+    <player>boy</player>
+    <player>the man</player>
+  </players>
+  <objects>
+    <object>knocker</object>
+    <object>turkey</object>
+    <object>hand</object>
+  </objects>
+  <events> <!--actions-->
+    <event>stood</event>
+    <event>waiting</event>
+    <event>patting</event>
+    <event>shaving</event>
+  </events>
+  <keywords>
+    <keyword>bird</keyword>
+    <keyword>chuckle</keyword>
+    <keyword>nose</keyword>
+    <keyword>sticking-plaster</keyword>
+    <keyword></keyword>
+  </keywords>
+  <places>
+    <place>down-staris</place>
+  </places>
+  <paragraph pageNumber="130">
+
+      The hand in which he wrote the address was not a steady one, but write it he did, somehow, and went down-stairs to open the street door, ready for the coming of the poulterers man. As he stood there, waiting his arrival, the knocker caught his eye.
+      I shall love it, as long as I live. cried Scrooge, patting it with his hand. I scarcely ever looked at it before. What an honest expression it has in its face. Its a wonderful knocker.  Heres the Turkey. Hallo. Whoop. How are you. Merry Christmas.
+      It was a Turkey. He never could have stood upon his legs, that bird. He would have snapped them short off in a minute, like sticks of sealing-wax.
+      Why, its impossible to carry that to Camden Town, said Scrooge. You must have a cab.
+      The chuckle with which he said this, and the chuckle with which he paid for the Turkey, and the chuckle with which he paid for the cab, and the chuckle with which he recompensed the boy, were only to be exceeded by the chuckle with which he sat down breathless in his chair again, and chuckled till he cried.
+      Shaving was not an easy task, for his hand continued to shake very much; and shaving requires attention, even when you dont dance while you are at it. But if he had cut the end of his nose off, he would have put a piece of sticking-plaster over it, and been quite satisfied. 
+ 
+  </paragraph>
+</situation>
+
+<situation>
+  <!--Lefter E. Bogdan-->
+  <name type="3">
+    into the streets
+  </name>
+  <players>
+    <player>Scrooge</player>
+    <player>portly gentleman</player>
+  </players>
+  <objects>
+    <object>houses</object>
+    <object>windows</object>
+  </objects>
+  <events> <!--actions-->
+    <event>got out</event>
+    <event>walking</event>
+    <event>went</event>
+    <event>patted</event>
+    <event>questioned</event>
+  </events>
+  <keywords>
+    <keyword>the people</keyword>
+    <keyword>pleasant</keyword>
+    <keyword>people</keyword>
+    <keyword>children</keyword>
+    <keyword>beggars</keyword>
+    <keyword>walk</keyword>
+  </keywords>
+  <places>
+    <place>streets</place>
+    <place>church</place>
+  </places>
+  <paragraph pageNumber="132">
+ 
+      He dressed himself all in his best, and at last got out into the streets. The people were by this time pouring forth, as he had seen them with the Ghost of Christmas Present; and walking with his hands behind him, Scrooge regarded every one with a delighted smile. He looked so irresistibly pleasant, in a word, that three or four good-humoured fellows said, Good morning, sir. A merry Christmas to you. And Scrooge said often afterwards, that of all the blithe sounds he had ever heard, those were the blithest in his ears.
+      He had not gone far, when coming on towards him he beheld the portly gentleman, who had walked into his counting-house the day before, and said, Scrooge and Marleys, I believe. It sent a pang across his heart to think how this old gentleman would look upon him when they met; but he knew what path lay straight before him, and he took it.
+      My dear sir, said Scrooge, quickening his pace, and taking the old gentleman by both his hands. How do you do. I hope you succeeded yesterday. It was very kind of you. A merry Christmas to you, sir.
+      Mr Scrooge.
+      Yes, said Scrooge. That is my name, and I fear it may not be pleasant to you. Allow me to ask your pardon. And will you have the goodness  here Scrooge whispered in his ear.
+      Lord bless me. cried the gentleman, as if his breath were taken away. My dear Mr Scrooge, are you serious.
+      If you please, said Scrooge. Not a farthing less. A great many back-payments are included in it, I assure you. Will you do me that favour.
+      My dear sir, said the other, shaking hands with him. I dont know what to say to such munificence.
+      Dont say anything please, retorted Scrooge. Come and see me. Will you come and see me.
+      I will. cried the old gentleman. And it was clear he meant to do it.
+      Thank you, said Scrooge. I am much obliged to you. I thank you fifty times. Bless you.
+      He went to church, and walked about the streets, and watched the people hurrying to and fro, and patted children on the head, and questioned beggars, and looked down into the kitchens of houses, and up to the windows, and found that everything could yield him pleasure. He had never dreamed that any walk  that anything  could give him so much happiness. In the afternoon he turned his steps towards his nephews house.
+
+  </paragraph>
+</situation>
+
+<situation>
+  <!--Lefter E. Bogdan-->
+  <name type="3">
+    nephew's house
+  </name>
+  <players>
+    <player>Scrooge</player>
+    <player>the girl</player>
+    <player>Fred</player>
+    <player>niece</player>
+    <player>Topper</player>
+    <player>plump sister</player>
+    <player>niece</player>
+  </players>
+  <objects>
+    <object>door</object>
+    <object>table</object>
+    <object> </object>
+  </objects>
+  <events> <!--actions-->
+    <event>knock</event>
+    <event>said</event>
+    <event>looking</event>
+  </events>
+  <keywords>
+    <keyword>party</keyword>
+    <keyword>up-stairs</keyword>
+    <keyword>dinner</keyword>
+    <keyword>games</keyword>
+    <keyword>dinner</keyword>
+  </keywords>
+  <places>
+    <place>house</place>
+    <place>dinning-room</place>
+  </places>
+  <paragraph pageNumber="134">
+
+      He passed the door a dozen times, before he had the courage to go up and knock. But he made a dash, and did it:
+      Is your master at home, my dear. said Scrooge to the girl. Nice girl. Very.
+      Yes, sir.
+      Where is he, my love. said Scrooge.
+      Hes in the dining-room, sir, along with mistress. Ill show you up-stairs, if you please.
+      Thank you. He knows me, said Scrooge, with his hand already on the dining-room lock. Ill go in here, my dear.
+      He turned it gently, and sidled his face in, round the door. They were looking at the table (which was spread out in great array); for these young housekeepers are always nervous on such points, and like to see that everything is right.
+      Fred. said Scrooge.
+      Dear heart alive, how his niece by marriage started. Scrooge had forgotten, for the moment, about her sitting in the corner with the footstool, or he wouldnt have done it, on any account.
+      Why bless my soul. cried Fred, whos that.
+      Its I. Your uncle Scrooge. I have come to dinner. Will you let me in, Fred.
+      Let him in. It is a mercy he didnt shake his arm off. He was at home in five minutes. Nothing could be heartier. His niece looked just the same. So did Topper when he came. So did the plump sister when she came. So did every one when they came. Wonderful party, wonderful games, wonderful unanimity, wonderful happiness.
+
+  </paragraph>
+</situation>
+
+<situation>
+  <!--Lefter E. Bogdan-->
+  <name type="3">
+    at the office
+  </name>
+  <players>
+    <player>Scrooge</player>
+    <player>Bob Cratchit</player>
+  </players>
+  <objects>
+    <object>clock</object>
+    <object>door</object>
+    <object>stool</object>
+    <object>pen</object>
+    <object>ruler</object>
+  </objects>
+  <events> <!--actions-->
+    <event>sat</event>
+    <event>said</event>
+    <event>looking</event>
+    <event>leaping</event>
+    <event>staggered</event>
+    <event>giving a dig</event>
+    <event>clapped</event>
+  </events>
+  <keywords>
+    <keyword>hat</keyword>
+    <keyword>waistcoat</keyword>
+    <keyword>salary</keyword>
+    <keyword>affairs</keyword>
+    <keyword>coal-scuttle</keyword>
+  </keywords>
+  <places>
+    <place>office</place>
+  </places>
+  <paragraph pageNumber="135">
+
+      But he was early at the office next morning. Oh, he was early there. If he could only be there first, and catch Bob Cratchit coming late. That was the thing he had set his heart upon.
+      And he did it; yes, he did. The clock struck nine. No Bob. A quarter past. No Bob. He was full eighteen minutes and a half behind his time. Scrooge sat with his door wide open, that he might see him come into the Tank.
+      His hat was off, before he opened the door; his comforter too. He was on his stool in a jiffy; driving away with his pen, as if he were trying to overtake nine oclock.
+      Hallo. growled Scrooge, in his accustomed voice, as near as he could feign it. What do you mean by coming here at this time of day.
+      I am very sorry, sir, said Bob. I am behind my time.
+      You are. repeated Scrooge. Yes. I think you are. Step this way, sir, if you please.
+      Its only once a year, sir, pleaded Bob, appearing from the Tank. It shall not be repeated. I was making rather merry yesterday, sir.
+      Now, Ill tell you what, my friend, said Scrooge, I am not going to stand this sort of thing any longer. And therefore, he continued, leaping from his stool, and giving Bob such a dig in the waistcoat that he staggered back into the Tank again; and therefore I am about to raise your salary.
+      Bob trembled, and got a little nearer to the ruler. He had a momentary idea of knocking Scrooge down with it, holding him, and calling to the people in the court for help and a strait-waistcoat.
+      A merry Christmas, Bob, said Scrooge, with an earnestness that could not be mistaken, as he clapped him on the back. A merrier Christmas, Bob, my good fellow, than I have given you for many a year. Ill raise your salary, and endeavour to assist your struggling family, and we will discuss your affairs this very afternoon, over a Christmas bowl of smoking bishop, Bob. Make up the fires, and buy another coal-scuttle before you dot another i, Bob Cratchit.
+      Scrooge was better than his word. He did it all, and infinitely more; and to Tiny Tim, who did not die, he was a second father. He became as good a friend, as good a master, and as good a man, as the good old city knew, or any other good old city, town, or borough, in the good old world. Some people laughed to see the alteration in him, but he let them laugh, and little heeded them; for he was wise enough to know that nothing ever happened on this globe, for good, at which some people did not have their fill of laughter in the outset; and knowing that such as these would be blind anyway, he thought it quite as well that they should wrinkle up their eyes in grins, as have the malady in less attractive forms. His own heart laughed: and that was quite enough for him.
+      He had no further intercourse with Spirits, but lived upon the Total Abstinence Principle, ever afterwards; and it was always said of him, that he knew how to keep Christmas well, if any man alive possessed the knowledge. May that be truly said of us, and all of us! And so, as Tiny Tim observed, God bless Us, Every One!
+
+  </paragraph>
+</situation>
+</situations>

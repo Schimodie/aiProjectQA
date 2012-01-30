@@ -61,47 +61,69 @@ public class MainKnowledge {
     }
     
     
-    public static String answer(String questionText)
-    {
-        Question question = Parser.parse(questionText);
-        
-        return "Hello World";
-    }
+//    public static String answer(String questionText)
+//    {
+//        Question question = Parser.parse(questionText);
+//        
+//        return "Hello World";
+//    }
+//    
+//    public static void loadKnowledge(String path)
+//    {
+//        //TODO
+//    }
     
-    public static void loadKnowledge(String path)
-    {
-        //TODO
-    }
-    
-    public static String getWiki(String inputString, HashMap<String, String> data) throws MalformedURLException, IOException  {
+    public static String searchWiki(String inputString, ArrayList<String> keywords) {
 //        StringBuffer inputSb = new StringBuffer(inputString);
         
-        String parsedText = inputString.trim().replaceAll("\\s+", "%20");
-        if(parsedText.length() == 0)
-            return "";
-
-        URL wikiURL = new URL("http://www.google.com/search?btnI=I'm+Feeling+Lucky&q=" + parsedText + "%20site%3Aen.wikipedia.org");
+        HashMap<String, String> data = new HashMap<String, String>();
         
-        HttpURLConnection connection = (HttpURLConnection) wikiURL.openConnection();
-        connection.addRequestProperty("User-Agent", "Mozilla/4.76");
-        connection.setConnectTimeout(15000);
-        connection.setReadTimeout(15000);
-        connection.setInstanceFollowRedirects(true);
-        connection.connect();
-
-                
-        BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream())); //oracle.openStream()
-        
-        String inputLine;
-
-        StringBuilder sb = new StringBuilder();
-        while ((inputLine = in.readLine()) != null) {
-            sb.append(inputLine);
-//            System.out.println(inputLine);
+        String keywordsPattern = null;
+        if(keywords != null && keywords.size() > 0)
+        {
+            keywordsPattern = keywords.get(0).replaceAll("\\s+", "\\\\s+");
+            for(int i=1; i<keywords.size(); i++)
+                keywordsPattern += "|" +keywords.get(i).replaceAll("\\s+", "\\\\s+");
+            keywordsPattern = "(?i)^\\s*"+keywordsPattern + ".*";
         }
-        
-        String text = sb.toString();
 
+        String parsedText = inputString.trim().replaceAll("\\s+", "%20");
+        if (parsedText.length() == 0) {
+            return "";
+        }
+
+        String text = "";
+                
+        try
+        {
+            URL wikiURL = new URL("http://www.google.com/search?btnI=I'm+Feeling+Lucky&q=" + parsedText + "%20site%3Aen.wikipedia.org");
+
+            HttpURLConnection connection = (HttpURLConnection) wikiURL.openConnection();
+            connection.addRequestProperty("User-Agent", "Mozilla/4.76");
+            connection.setConnectTimeout(15000);
+            connection.setReadTimeout(15000);
+            connection.setInstanceFollowRedirects(true);
+            connection.connect();
+
+
+            BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream())); //oracle.openStream()
+
+            String inputLine;
+
+            StringBuilder sb = new StringBuilder();
+            while ((inputLine = in.readLine()) != null) {
+                sb.append(inputLine);
+    //            System.out.println(inputLine);
+            }
+
+            text = sb.toString();
+
+        }
+        catch(Exception ex)
+        {
+            return "";
+        }
+                
         int start = 0;
         int end = 0;
         
@@ -123,9 +145,7 @@ public class MainKnowledge {
         
         text = text.substring(start, end);
         
-        String tagRegex = "</?\\w+(\\s+\\w+\\s*=\\s*('[^']*'|\"[^\"]*\"))*\\s*/?>?";
-        //remove table of content
-        text = text.replaceAll("(?s)<table\\s+id=(\"|')toc(\"|').*?</\\s*table>", " ");
+        String tagRegex = "</?\\w+(\\s+\\w(\\w|:)*\\s*=\\s*('[^']*'|\"[^\"]*\"))*\\s*/?>?";
         text = text.replaceAll("(?s)<a\\s+href=(\"|')#cite.*?</\\s*a>", " ");
         text = text.replaceAll("(?s)<span\\s+class=(\"|')editsection.*?</\\s*span>", " ");
         text = text.replaceAll("(?s)<div\\s+class=(\"|')dablink.*?</\\s*div>", " ");
@@ -134,47 +154,145 @@ public class MainKnowledge {
         text = text.replaceAll("(&#160;|&nbsp;)", " ");
         text = text.replaceAll("(?s)<div\\s+class=(\"|')reflist.*$","");
         
-        if(data != null)
+        //substract infograph
+        p = Pattern.compile("<table\\s+class=\"infobox.*?</table>",Pattern.DOTALL);
+        m = p.matcher(text);
+        String infoBox = "";
+        int infoBoxEnd = 0;
+        if(m.find())
         {
-            //substract infograph
-            p = Pattern.compile("<table\\s+class=\"infobox.*?</table>",Pattern.DOTALL);
-            m = p.matcher(text);
-            String infoBox = "";
-            if(m.find())
-            {
-                infoBox = m.group();
-                //Substract Data
+            infoBox = m.group();
+            infoBoxEnd = m.end();
+            //Substract Data
 //                p = Pattern.compile("<tr.*?>\\s*<t(d|h).*?>(.*?)</t(d|h)>\\s*<td.*?>(.*?)</td>\\s*</tr>");
-                p = Pattern.compile("<tr.*?>(.*?)</tr>");
-                m = p.matcher(infoBox);
-                Pattern p2 = Pattern.compile("\\s*<t(d|h).*?>(.*?)</t(d|h)>\\s*<td.*?>(.*?)</td>\\s*");
-                Matcher m2;
-                int endRows = 0;
-                String row = "";
-                while(m.find(endRows))
+            p = Pattern.compile("<tr.*?>(.*?)</tr>");
+            m = p.matcher(infoBox);
+            Pattern p2 = Pattern.compile("\\s*<t(d|h).*?>(.*?)</t(d|h)>\\s*<td.*?>(.*?)</td>\\s*");
+            Matcher m2;
+            int endRows = 0;
+            String row = "";
+            while(m.find(endRows))
+            {
+                row = m.group(1);
+                m2 = p2.matcher(row);
+                if(m2.find())
                 {
-                    row = m.group(1);
-                    m2 = p2.matcher(row);
-                    if(m2.find())
-                    {
-                        String k = m2.group(2).replaceAll(tagRegex, "");
-                        String v = m2.group(4).replaceAll(tagRegex, "");
-                        data.put(k, v);
-                    }
-                    
-                    endRows = m.end();
+                    String k = m2.group(2).replaceAll(tagRegex, "");
+                    String v = m2.group(4).replaceAll(tagRegex, "");
+                    data.put(k, v);
                 }
 
+                endRows = m.end();
             }
-            if(infoBox.length() >0)
-                text = text.replace(infoBox, " ");
+        }
+        if(infoBox.length() >0)
+            text = text.substring(infoBoxEnd);
+//                text = text.replace(infoBox, " ");
+        
+        //End infograph
+        
+        
+        //removing table of content
+//        String firstPart= "";
+//        p = Pattern.compile("(?s)<table\\s+id=(\"|')toc(\"|').*?</\\s*table>");
+//        m = p.matcher(text);
+//        if(m.find())
+//        {
+//            firstPart = text.substring(0, m.start());
+//            text = text.replace(m.group(), " ");
+//        }
+
+        //removing table of contents
+        text = text.replaceAll("(?s)<table\\s+id=(\"|')toc(\"|').*?</\\s*table>", " ");
+
+        
+        if(!keywordsPattern.equals(""))
+        {
+            for(String key : data.keySet())
+            {
+                if(key.matches(keywordsPattern))
+                    return data.get(key);
+            }
+            return "";
+        }
+            
+        
+        
+//        if(!firstPart.equals(""))
+//        {
+//            //then it's a good wiki page
+//            firstPart = firstPart.replaceAll(tagRegex, " ").replaceAll("<!--[^>]+>", " ").replaceAll("\\s+", " ");
+//            for(String word in inputString)
+//        }
+
+        ArrayList<String> paragraphs = new ArrayList<String>();
+        
+        p = Pattern.compile("(?s)<p>(.*?)</p>");
+        m = p.matcher(text);
+        
+        end =0;
+        while(m.find(end))
+        {
+            paragraphs.add(m.group(1).replaceAll(tagRegex, " ").replaceAll("<!--[^>]+>", " ").replaceAll("\\s+", " "));
+            end = m.end();
         }
         
-        text = text.replaceAll(tagRegex," ").replaceAll("<!--[^>]+>", " ").replaceAll("\\s+", " "); 
+        if(paragraphs.size() == 0)
+            return "";
+        
+        
+        String output = "";
+        
+        String startText = paragraphs.get(0);
+        String pattern = inputString;
+        if(inputString.contains(" "))
+            pattern = "(" + inputString.replaceAll("\\s+","|") + ")";
+        p = Pattern.compile("(?i)^\\s*" + pattern);
+        m = p.matcher(startText) ;
+        if(m.find())
+        {
+            //paragraph about person. then it's ok
+            output = startText;
+            int index = 1;
+            while(output.length() < 500 && paragraphs.size() >= index)
+            {
+                output+=paragraphs.get(index);
+                index++;
+            }
+        }
+        else
+        {
+            //search in list
+//            System.out.println("zz: " + "(?i)(?s)<li>(\\s*" + inputString.replaceAll("\\s+", "\\s+") + ".*?)</li>");
+            p = Pattern.compile("(?i)(?s)<li>(\\s*"+inputString.replaceAll("\\s+", "\\\\s+") +".*?)</li>");
+            m= p.matcher(text);
+            if(m.find())
+            {
+                output = m.group(1);
+            }
+            else {
+                //TODO full scan.
+            }
+
+        }
+        //TODO search by keywords.
+        
+        
+        
+        //check first paragraph
+        //collect until > 500 words if short only first paragraph
+        
+        return output;
+        
+        
+//        text = text.replaceAll(tagRegex," ").replaceAll("<!--[^>]+>", " ").replaceAll("\\s+", " "); 
 //        text = text.replaceAll("<!--[^>]+>", " ").replaceAll("\\s+", " ");
         
-        return text;
+//        return text;
     }
+    
+    
+    
     
     public static String checkAndCorrect(String text)
     {

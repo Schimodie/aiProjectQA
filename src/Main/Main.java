@@ -8,6 +8,7 @@ import AnswerFinding.Answer;
 import AnswerFinding.NovelInfo;
 import AnswerFinding.QueryResult;
 import QuestionParser.Lemmatizer;
+import QuestionParser.MainKnowledge;
 import QuestionParser.Parser;
 import QuestionParser.Question;
 import Situations.Situation;
@@ -54,6 +55,21 @@ public class Main {
         ArrayList<QueryResult> qrs = new ArrayList<QueryResult>();
         
         System.out.println(a.answer(q));
+
+        
+
+        //Search 1 example
+//        String data = MainKnowledge.searchWiki("Myrtle Wilson", null) ;
+//        System.out.println("out: " + data);
+
+        //Search 2 example
+//        ArrayList<String> keywords = new ArrayList<String>();
+//        keywords.add("publisher");
+////        keywords.add("isbn");
+//        //better not include short words like "is" or other small words.
+//        String data = MainKnowledge.searchWiki("Great Gatsby", keywords);
+//        System.out.println("out: " + data);
+
         
         /*SituationsParser accKeywords = new SituationsParser("situations.xml"); //A Christmas Carol
         

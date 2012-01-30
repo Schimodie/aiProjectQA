@@ -74,7 +74,7 @@ public class Action {
         int endIndex;
         String after;
         String before;
-        String pattern = "[,;:\\s]";
+        String pattern = "[\\Q.,;:'?!\\E\"\\s]";
         
         if (container.isEmpty()) {
             return 0;

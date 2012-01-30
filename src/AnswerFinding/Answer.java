@@ -128,67 +128,39 @@ public class Answer
                 break;
             }
             case EVENT: {
-                int score;
-                int maxScore = Integer.MIN_VALUE;
-                Action actQr = null;
+                int bIndex;
+                int eIndex;
+                String after;
+                String before;
+                String pattern = "[\\Q.,;:'?!\\E\"\\s]";
                 String text;
-                ArrayList<String> actDates;
                 
                 for (Action act : this.novelInfo.getActions()) {
-                    //actDates = MainKnowledge.getDates(act.getText());
-                    //score = 0;
                     text = act.getText();
                     
-                    for (int i = 0; i < text.length(); ++i) {
-                        for (String date : dates) {
-                            if (i + date.length() <= text.length()) {
-                                if (
-                                    text.regionMatches (
-                                        i,
-                                        date.toLowerCase(),
-                                        0,
-                                        date.length()
-                                    )
-                                ) {
-                                    return 
-                                        "The following event occured:\n" +
-                                        actQr.getText();
-                                }
-                            }
-                        }
-                    }
-                    
-                    /*for (String date : dates) {
-                        for (String actDate : actDates) {
-                            for (
-                                int i = 0;
-                                i < actDate.length() - date.length() + 1;
-                                ++i
+                    for (String date : dates) {
+                        bIndex = text.indexOf(date.toLowerCase());
+
+                        if (bIndex > -1) {
+                            eIndex = bIndex + date.length() + 1;
+                            after = eIndex <= text.length() 
+                                    ? text.substring(eIndex -1 , eIndex)
+                                    : "";
+                            before = bIndex > 0
+                                     ? text.substring(bIndex - 1, bIndex)
+                                     : "";
+
+                            if (
+                                ("".equals(before) || before.matches(pattern)) && 
+                                ("".equals(after) || after.matches(pattern))
                             ) {
-                                if (
-                                    actDate.regionMatches (
-                                        i,
-                                        date,
-                                        0,
-                                        date.length()
-                                    )
-                                ) {
-                                    ++score;
-                                }                                
+                                return 
+                                    "The following event occured:\n" +
+                                    act.getText();
                             }
                         }
-                    }
-                    
-                    if (score > maxScore) {
-                        maxScore = score;
-                        actQr = act;
-                    }*/
+                    }   
                 }
-                
-                /*if (maxScore != 0)
-                    return 
-                        "The following event occured:\n" +
-                        actQr.getText();*/
                 
                 break;
             }
@@ -525,7 +497,7 @@ public class Answer
         int eIndex;
         String after;
         String before;
-        String pattern = "[,;:\\s]";
+        String pattern = "[\\Q.,;:'?!\\E\"\\s]";
         
         for (String item : list) {
             if ((bIndex = str.indexOf(item.toLowerCase())) != -1) {

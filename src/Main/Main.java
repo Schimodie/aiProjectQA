@@ -30,15 +30,13 @@ public class Main {
     public static void main(String[] args) {
         NovelInfo ni = new NovelInfo("output.xml", "rezumat.txt", "situations.xml");
         Answer a = new Answer(ni);
-        String question = "Who is Ebenezer Scrooge?";
+        String question = "What does Ebenezer Scrooge do in the novel?";
         Question q = Parser.parse(question);
         ArrayList<QueryResult> qrs = new ArrayList<QueryResult>();
         
         System.out.println(a.answer(q));
 
-        
-
-        //Search 1 example
+        /*//Search 1 example
         String data = MainKnowledge.searchWiki("Myrtle Wilson", null) ;
         System.out.println("out: " + data);
 
@@ -47,9 +45,8 @@ public class Main {
         keywords.add("publisher");
         //better not include short words like "is" or other small words.
         data = MainKnowledge.searchWiki("Great Gatsby", keywords);
-        System.out.println("out: " + data);
+        System.out.println("out: " + data);*/
 
-        
         /*SituationsParser accKeywords = new SituationsParser("situations.xml"); //A Christmas Carol
         
         accKeywords.parse();

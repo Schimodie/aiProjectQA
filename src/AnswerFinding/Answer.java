@@ -71,10 +71,58 @@ public class Answer
                     }
                 }
                 else if (q.containsFocusType(FocusType.PERSON)) {
-                    String chr = this.getCharFullName(q.getMainObjects().get(0));
-                    String data = MainKnowledge.searchWiki(chr, null);
+                    String chr = "";
+                    String data = "";
                     
-                    return "Data found about " + chr + ":\n" + data.trim();
+                    for (String str : mo) {
+                        chr = this.getCharFullName(str);
+                        data += 
+                            "Data found about " + chr + ":\n" +
+                            MainKnowledge.searchWiki(chr, null).trim() + "\n";
+                    }
+                    
+                    return data.trim();
+                }
+                else if (q.containsFocusType(FocusType.OCCUPATION)) {
+                    int max = Integer.MIN_VALUE;
+                    QueryResult qr;
+                    QueryResult actQr = null;
+                    
+                    for (Action act : this.novelInfo.getActions()) {
+                        qr = act.query(q);
+                        
+                        if (qr.getScore() > max) {
+                            actQr = qr;                            
+                            max = qr.getScore();
+                        }
+                    }
+                    
+                    if (actQr ==null) {
+                        break;
+                    }
+                    
+                    return
+                        "The following data has been found about " +
+                        this.getCharFullName(mo.get(0)) + "'s occupation:\n" +
+                        actQr.getResult();
+                }
+                else {
+                    String chr = "";
+                    String data = "";
+                    
+                    for (String str : mo) {
+                        chr = this.getCharFullName(str);
+                        
+                        if ("".equals(chr)) {
+                            chr = this.toName(str);
+                        }
+                        
+                        data += 
+                            "Data found about " + chr + ":\n" +
+                            MainKnowledge.searchWiki(chr, null).trim() + "\n";
+                    }
+                    
+                    return data.trim();
                 }
                 
                 break;

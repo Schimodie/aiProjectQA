@@ -4,6 +4,8 @@
  */
 package QuestionParser;
 
+import AnswerFinding.Answer;
+import AnswerFinding.QueryResult;
 import java.io.BufferedReader;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -11,6 +13,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.ArrayList;
 
 /**
  *
@@ -22,7 +25,7 @@ public class Server {
      * @param args
      * @throws Exception 
      */
-    public static void Run() throws IOException
+    public static void Run(Answer a) throws IOException
     {
 //        try{
             String received;
@@ -47,8 +50,12 @@ public class Server {
                     {
                         case 1:
                             String question = readString(inFromClient);
-                            System.out.println("Received question: " + question);
-                            writeString(outToClient, question + " Jora");
+//                            System.out.println("Received question: " + question);
+//                            String question = "What does Ebenezer Scrooge do in the novel?";
+                            Question q = Parser.parse(question);
+//                            ArrayList<QueryResult> qrs = new ArrayList<QueryResult>();
+                            
+                            writeString(outToClient, a.answer(q));
                             break;
                         case 2:
                             String path = readString(inFromClient);//calea primita

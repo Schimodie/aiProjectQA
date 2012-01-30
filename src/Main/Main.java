@@ -21,6 +21,14 @@ public class Main {
         ArrayList<QueryResult> qrs = new ArrayList<QueryResult>();
         
         System.out.println(a.answer(q));
+
+//        try
+//        {
+//            Server.Run(a); 
+//        } catch (IOException ex) {
+//            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+
         
 //Testing time parsing
 /*       String situation = "At the request of Mr. Gatsby we are going to play for you Mr Vladimir Tostoff's latest work which attracted"

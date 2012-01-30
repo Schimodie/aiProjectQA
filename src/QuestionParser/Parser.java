@@ -432,6 +432,11 @@ public class Parser {
         }
         
         
+        String output = parseTime(outputQuestion, question);
+        if (output != null) {
+            question = output;
+        }
+
 //        String text = question;
         Pattern r = Pattern.compile("([\"\'](\\w)+[\"\'])|(\\s*(([A-Z]\\w+\\s*)+))");
         m = r.matcher(question);
@@ -490,12 +495,6 @@ public class Parser {
             question = question.substring(2);
         }
        
-        String output = parseTime(outputQuestion, question);
-        if (output != null) {
-            question = output;
-        }
-        
-        
 
         setKeywords(outputQuestion, question);
 

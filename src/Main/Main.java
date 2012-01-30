@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package Main;
 
 import AnswerFinding.Answer;
@@ -19,14 +15,9 @@ import java.util.Comparator;
 
 /**
  *
- * @author Dinu
+ * @author Radu
  */
 public class Main {
-    /**
-     * @param args the command line arguments
-     */
-    
-    
     public static void main(String[] args) {
         NovelInfo ni = new NovelInfo("output.xml", "rezumat.txt", "situations.xml");
         Answer a = new Answer(ni);
@@ -46,26 +37,6 @@ public class Main {
         //better not include short words like "is" or other small words.
         data = MainKnowledge.searchWiki("Great Gatsby", keywords);
         System.out.println("out: " + data);*/
-
-        /*SituationsParser accKeywords = new SituationsParser("situations.xml"); //A Christmas Carol
-        
-        accKeywords.parse();
-        
-        for (Situation sit : accKeywords.getSituations()) {
-            //System.out.println(sit.toString() + "\n");
-            
-            qrs.addAll(sit.query(q));
-        }
-        
-        Collections.sort(qrs, new Comparator<QueryResult>() {
-            @Override
-            public int compare(QueryResult o1, QueryResult o2) {
-                return o2.getScore() - o1.getScore();
-            }
-        });
-        
-        for (QueryResult qr : qrs)
-            System.out.println(qr.getScore() + " " + qr.getResult());*/
     }
 }
 

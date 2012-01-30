@@ -1,6 +1,10 @@
 package InfoExtraction;
 
+import AnswerFinding.QueryResult;
 import QuestionParser.Lemmatizer;
+import QuestionParser.Question;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Action {
     private String text;
@@ -61,5 +65,94 @@ public class Action {
             strb.append(glue).append(strs[x]);
         
         return strb.toString();
+    }
+    
+    private int computeScore(ArrayList<String> keywords, ArrayList<String> container) {
+        int maxScore = Integer.MIN_VALUE;
+        int score;
+        int beginIndex;
+        int endIndex;
+        String after;
+        String before;
+        String pattern = "[,;:\\s]";
+        
+        if (container.isEmpty()) {
+            return 0;
+        }
+        
+        for (String str : container) {
+            score = 0;
+            
+            for (String key : keywords) {
+                beginIndex = str.indexOf(key);
+                
+                if (beginIndex != -1) {
+                    endIndex = beginIndex + key.length() + 1;
+                    after = beginIndex + key.length() < str.length() 
+                            ? str.substring(beginIndex + key.length(), endIndex)
+                            : "";
+                    before = beginIndex > 0 
+                             ? str.substring(beginIndex - 1, beginIndex)
+                             : "";
+                    
+                    if (
+                        ("".equals(before) || before.matches(pattern)) && 
+                        ("".equals(after) || after.matches(pattern))
+                    ) {
+                        ++score;
+                    }
+                }
+            }
+            
+            if (score > maxScore) {
+                maxScore = score;
+            }
+        }
+        
+        return maxScore;
+    }
+    
+    public QueryResult query(Question q) {
+        int score = 0;
+        ArrayList<String> _verbs = q.getVerbs(true);
+        ArrayList<String> _mo = q.getMainObjects();
+        ArrayList<String> _kyewords = q.getKeywords();
+        ArrayList<String> _text = new ArrayList<String> (
+            Arrays.asList(new String[] { this.text })
+        );
+        
+        for (String vb : this.verbs) {
+            if (this.contains(_verbs, vb)) {
+                ++score;
+            }
+        }
+        
+        for (String ch : this.characters) {
+            if (this.contains(_mo, ch)) {
+                ++score;
+            }
+        }
+        
+        for (String place : this.places) {
+            if (this.contains(_mo, place)) {
+                ++score;
+            }
+        }
+        
+        score += this.computeScore(_verbs, _text);
+        score += this.computeScore(_mo, _text);
+        score += this.computeScore(_kyewords, _text);
+        
+        return new QueryResult(score, this.text, this);
+    }
+    
+    private boolean contains(ArrayList<String> words, String word) {
+        for (String w : words) {
+            if (w.equalsIgnoreCase(word)) {
+                return true;
+            }
+        }
+        
+        return false;
     }
 }

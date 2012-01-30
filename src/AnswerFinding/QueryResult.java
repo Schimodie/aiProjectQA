@@ -1,21 +1,19 @@
 package AnswerFinding;
 
-import Situations.Situation;
-
 public class QueryResult {
     private int score;
     private String result;
-    private Situation situation;
+    private Object obj;
 
-    public QueryResult(int score, String result, Situation situation) {
+    public QueryResult(int score, String result, Object obj) {
         this.result = result;
         this.score = score;
-        this.situation = situation;
+        this.obj = obj;
     }
 
     public String getResult() { return this.result; }
 
     public int getScore() { return this.score; }
 
-    public Situation getSituation() { return this.situation; }
+    public Object getObject() { return this.obj; }
 }

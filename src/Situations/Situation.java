@@ -4,6 +4,7 @@ import AnswerFinding.QueryResult;
 import QuestionParser.Lemmatizer;
 import QuestionParser.Question;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public final class Situation {
     private String name;
@@ -24,10 +25,11 @@ public final class Situation {
         
         String[] trimedParts = paragraph.split("\n");
         
-        for (int i = 0; i < trimedParts.length; ++i)
+        for (int i = 0; i < trimedParts.length; ++i) {
             trimedParts[i] = trimedParts[i].trim();
+        }
         
-        this.name = name.toLowerCase();
+        this.name = Lemmatizer.lemmatize(name.toLowerCase());
         this.paragraph = this.join("", trimedParts);
         this.paragraph = 
             this.paragraph.toLowerCase()
@@ -35,10 +37,12 @@ public final class Situation {
                 .replace("\"", "")
                 .replace("‘", "")
                 .replace("’", "");
+        
         this.phrases = this.paragraph.split("[\\Q.!?\\E]");
         
-        for (int i = 0; i < this.phrases.length; ++i)
+        for (int i = 0; i < this.phrases.length; ++i) {
             this.phrases[i] = this.phrases[i].trim();
+        }
     }
     
     public void addCharacter(String character) {
@@ -75,13 +79,15 @@ public final class Situation {
         int len = strs.length;
         StringBuilder strb = new StringBuilder();
         
-        if (len == 0)
+        if (len == 0) {
             return null;
+        }
         
         strb.append(strs[0]);
         
-        for (int x = 1; x < len; ++x)
+        for (int x = 1; x < len; ++x) {
             strb.append(glue).append(strs[x]);
+        }
         
         return strb.toString();
     }
@@ -96,17 +102,15 @@ public final class Situation {
         for (String str : q.getMainObjects()) {
             mystr = str.toLowerCase();
             
-            for (String mstr : mystr.split(" ")) {
-                if (
-                    !"".equals(mstr) && (
-                    this.characters.contains(mstr) ||
-                    this.events.contains(mstr) ||
-                    this.keywords.contains(mstr) ||
-                    this.objects.contains(mstr) ||
-                    this.places.contains(mstr) ||
-                    this.name.contains(mstr)
-                ))
-                    ++baseScore;
+            if (
+                this.characters.contains(mystr) ||
+                this.events.contains(mystr) ||
+                this.keywords.contains(mystr) ||
+                this.objects.contains(mystr) ||
+                this.places.contains(mystr) ||
+                this.name.contains(mystr)
+            ) {
+                ++baseScore;
             }
         }
         
@@ -118,21 +122,31 @@ public final class Situation {
             this.computeScore(_keywords, this.places)
         );
         
+        baseScore += this.computeScore(_keywords, new ArrayList<String> (
+           Arrays.asList(new String[] { this.name }) 
+        ));
+        
         for (String phrase : this.phrases) {
             score = baseScore;
                 
             for (String str : q.getMainObjects()) {
                 mystr = str.toLowerCase();
                 
-                for (String mstr : mystr.split(" ")) {
-                    if (!"".equals(mstr) && phrase.contains(mstr)) {
-                        ++score;
-                    }
+                if (phrase.contains(mystr)) {
+                    ++score;
+                    
+                    score += this.computeScore (
+                        _keywords,
+                        new ArrayList<String> (
+                            Arrays.asList(new String[] { phrase })
+                        )
+                    );
                 }
             }
             
-            if (score != baseScore)
+            if (score != baseScore) {
                 qrs.add(new QueryResult(score, phrase, this));
+            }
         }
         
         return qrs;
@@ -146,6 +160,10 @@ public final class Situation {
         String after;
         String before;
         String pattern = "[,;:\\s]";
+        
+        if (container.isEmpty()) {
+            return 0;
+        }
         
         for (String str : container) {
             score = 0;
@@ -164,27 +182,33 @@ public final class Situation {
                     
                     if (
                         ("".equals(before) || before.matches(pattern)) && 
-                        ("".equals(after) ||after.matches(pattern))
+                        ("".equals(after) || after.matches(pattern))
                     ) {
                         ++score;
                     }
                 }
             }
             
-            if (score > maxScore)
+            if (score > maxScore) {
                 maxScore = score;
+            }
         }
         
         return maxScore;
     }
     
     private int max(int... array) {
-        if (array.length == 0)
+        if (array.length == 0) {
             return 0;
-        if (array.length == 1)
+        }
+        
+        if (array.length == 1) {
             return array[0];
-        if (array.length == 2)
+        }
+        
+        if (array.length == 2) {
             return this.max_(array[0], array[2]);
+        }
         
         int max = this.max_(array[0], array[1]);
         
@@ -204,28 +228,33 @@ public final class Situation {
         strb.append("Name: ").append(this.name)
             .append("\nCharacters:");
         
-        for (String str : this.characters)
+        for (String str : this.characters) {
             strb.append("\n  ").append(str);
+        }
         
         strb.append("\nObjects:");
         
-        for (String str : this.objects)
+        for (String str : this.objects) {
             strb.append("\n  ").append(str);
+        }
         
         strb.append("\nEvents:");
         
-        for (String str : this.events)
+        for (String str : this.events) {
             strb.append("\n  ").append(str);
+        }
         
         strb.append("\nKeywords:");
         
-        for (String str : this.keywords)
+        for (String str : this.keywords) {
             strb.append("\n  ").append(str);
+        }
         
         strb.append("\nPlaces:");
         
-        for (String str : this.places)
+        for (String str : this.places) {
             strb.append("\n  ").append(str);
+        }
         
         strb.append("\nParagraph:\n  ").append(this.paragraph);
         

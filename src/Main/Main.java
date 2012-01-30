@@ -49,18 +49,18 @@ public class Main {
         int score = Integer.MIN_VALUE;
         NovelInfo ni = new NovelInfo("output.xml", "rezumat.txt", "situations.xml");
         Answer a = new Answer(ni);
-        String question = "Where does the novel take place?";
+        String question = "Who shows Scrooge two starved children?";
+        Question q = Parser.parse(question);
+        ArrayList<QueryResult> qrs = new ArrayList<QueryResult>();
         
-        System.out.println(a.answer(Parser.parse(question)));
+        System.out.println(a.answer(q));
         
-        /*SituationsParser accKeywords = new SituationsParser("acc.xml"); //A Christmas Carol
-        SituationsParser tggKeywords = new SituationsParser("tgg.xml"); //The Great Gatsby
+        /*SituationsParser accKeywords = new SituationsParser("situations.xml"); //A Christmas Carol
         
         accKeywords.parse();
-        tggKeywords.parse();
         
         for (Situation sit : accKeywords.getSituations()) {
-            System.out.println(sit.toString() + "\n");
+            //System.out.println(sit.toString() + "\n");
             
             qrs.addAll(sit.query(q));
         }

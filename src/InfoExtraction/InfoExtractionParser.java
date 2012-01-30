@@ -33,7 +33,7 @@ public class InfoExtractionParser {
     
     private <T> T find(ArrayList<T> collection, String name) {
         for (T item : collection)
-            if (item.toString().contains(name))
+            if (item.toString().toLowerCase().contains(name.toLowerCase()))
                 return item;
         
         return null;
@@ -114,33 +114,12 @@ public class InfoExtractionParser {
             for (int i = 0; i < _relations.getLength(); ++i) {
                 el = (Element) _relations.item(i);
                 
-                entity1 = 
-                    "".equals(el.getAttribute("type1")) ||
-                    "character".equals(el.getAttribute("type1"))
-                    ? this.<Character>find (
-                          this.characters, 
-                          el.getAttribute("entity1")
-                      )
-                    : "location".equals(el.getAttribute("type1")) 
-                      ? this.<Place>find (
-                            this.places, 
-                            el.getAttribute("entity1")
-                        )
-                      : null;
-                
-                entity2 = 
-                    "".equals(el.getAttribute("type2")) ||
-                    "character".equals(el.getAttribute("type2"))
-                    ? this.<Character>find (
-                          this.characters, 
-                          el.getAttribute("entity2")
-                      )
-                    : "location".equals(el.getAttribute("type2")) 
-                      ? this.<Place>find (
-                            this.places, 
-                            el.getAttribute("entity2")
-                        )
-                      : null;
+                entity1 =
+                    this.getCharFullName(el.getAttribute("entity1"))
+                        .toLowerCase();
+                entity2 =
+                    this.getCharFullName(el.getAttribute("entity2"))
+                        .toLowerCase();
                 
                 this.relations.add(new Relation (
                     entity1,
@@ -152,5 +131,28 @@ public class InfoExtractionParser {
         catch (Exception e) {
             System.out.println(e.getMessage());
         }
+    }
+    
+    private String toName(String str) {
+        String aux = "";
+        String[] strs = str.split(" ");
+        
+        for (String string : strs) {
+            aux += 
+                string.substring(0, 1).toUpperCase() + 
+                string.substring(1) + " ";
+        }
+        
+        return aux.trim();
+    }
+    
+    private String getCharFullName(String someName) {
+        for (InfoExtraction.Character chr : this.characters) {
+            if (this.toName(chr.getName()).contains(this.toName(someName))) {
+                return chr.getName();
+            }
+        }
+        
+        return "";
     }
 }

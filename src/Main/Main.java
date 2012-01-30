@@ -50,7 +50,7 @@ public class Main {
         int score = Integer.MIN_VALUE;
         NovelInfo ni = new NovelInfo("output.xml", "rezumat.txt", "situations.xml");
         Answer a = new Answer(ni);
-        String question = "Who shows Scrooge two starved children?";
+        String question = "Who is Ebenezer Scrooge?";
         Question q = Parser.parse(question);
         ArrayList<QueryResult> qrs = new ArrayList<QueryResult>();
         
@@ -59,16 +59,15 @@ public class Main {
         
 
         //Search 1 example
-//        String data = MainKnowledge.searchWiki("Myrtle Wilson", null) ;
-//        System.out.println("out: " + data);
+        String data = MainKnowledge.searchWiki("Myrtle Wilson", null) ;
+        System.out.println("out: " + data);
 
         //Search 2 example
-//        ArrayList<String> keywords = new ArrayList<String>();
-//        keywords.add("publisher");
-////        keywords.add("isbn");
-//        //better not include short words like "is" or other small words.
-//        String data = MainKnowledge.searchWiki("Great Gatsby", keywords);
-//        System.out.println("out: " + data);
+        ArrayList<String> keywords = new ArrayList<String>();
+        keywords.add("publisher");
+        //better not include short words like "is" or other small words.
+        data = MainKnowledge.searchWiki("Great Gatsby", keywords);
+        System.out.println("out: " + data);
 
         
         /*SituationsParser accKeywords = new SituationsParser("situations.xml"); //A Christmas Carol

@@ -78,7 +78,7 @@ public class MainKnowledge {
         
         HashMap<String, String> data = new HashMap<String, String>();
         
-        String keywordsPattern = null;
+        String keywordsPattern = "";
         if(keywords != null && keywords.size() > 0)
         {
             keywordsPattern = keywords.get(0).replaceAll("\\s+", "\\\\s+");

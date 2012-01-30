@@ -7,6 +7,7 @@ import InfoExtraction.Relation;
 import QuestionParser.AnswerType;
 import QuestionParser.FocusType;
 import QuestionParser.Lemmatizer;
+import QuestionParser.MainKnowledge;
 import QuestionParser.Multiplicity;
 import QuestionParser.Question;
 import Situations.Situation;
@@ -68,6 +69,12 @@ public class Answer
                             }
                         }
                     }
+                }
+                else if (q.containsFocusType(FocusType.PERSON)) {
+                    String chr = this.getCharFullName(q.getMainObjects().get(0));
+                    String data = MainKnowledge.searchWiki(chr, null);
+                    
+                    return data;
                 }
                 
                 break;

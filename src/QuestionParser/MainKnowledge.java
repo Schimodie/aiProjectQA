@@ -152,6 +152,10 @@ public class MainKnowledge {
         text = text.replaceAll("(?s)<div\\s+class=(\"|')rellink.*?</\\s*div>", " ");
         //text = text.replaceAll("(?s)<div\\s+class=(\"|')thumb.*?</\\s*div>", " ");
         text = text.replaceAll("(&#160;|&nbsp;)", " ");
+        text = text.replaceAll("(&#38;|&amp;)", "&");
+        text = text.replaceAll("(&#60;|&lt;)", "<");
+        text = text.replaceAll("(&#62;|&gt;)", ">");
+        text = text.replaceAll("(&#34;|&quot;)", "\"");
         text = text.replaceAll("(?s)<div\\s+class=(\"|')reflist.*$","");
         
         //substract infograph
@@ -295,12 +299,13 @@ public class MainKnowledge {
     {
         ArrayList<String> output = null;
         String longMonth = "(January|February|March|April|May|June|July|August|September|October|November|December)";
-
+        String day = "(((twenty|thirty[- ]+)?(first|second|third|fourth|fifth|sixth|seventh|eighth|ninth|tenth))|"
+                +"(eleventh|twelfth|thirteenth|fourteenth|fifthteenth|sixteenth|seventeenth|eighteenth|nineteenth))";
 
         //in on
-        String x = "(([-,/ ]|^)\\d{4}([-,/ ]+\\d{1,2}){2}" + "|"
+        String x = "(?i)(([-,/ ]|^)\\d{4}([-,/ ]+\\d{1,2}){2}" + "|"
                 + "(([-,/ ]|^)+\\d{1,2}){0,2}[-,/ ]\\d{4}" + "|"
-                + "(([-,/ ]|^)+\\d{1,2}(th|rd|st)?)?(\\s+of)?" + longMonth + "([-,/ ]+\\d{1,2}(th|rd|st)?)?" + "([-,/ ]+\\d{4})?" + ")(\\D|$)";
+                + "([-,/ ]|^)+(\\d{1,2}(th|rd|st)?|"+day+")?(\\s+of)?([-,/ ]|^)*" + longMonth + "([-,/ ]+\\d{1,2}(th|rd|st)?)?" + "([-,/ ]+\\d{4})?" + ")(\\D|$)";
 
         Pattern dateP = Pattern.compile(x);
         Matcher dateM = dateP.matcher(text);

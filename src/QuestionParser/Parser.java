@@ -151,35 +151,35 @@ public class Parser {
 
 
         
-        Pattern novelP = Pattern.compile("\\s*the? novel");
-        Pattern personP = Pattern.compile("\\s*(the)?\\s*(([A-Z]\\w+\\s*)+)");
+        Pattern novelP = Pattern.compile("(^|\\s*)(the\\s+)?novel");
+        Pattern personP = Pattern.compile("(^|\\s*)(the)?\\s*(([A-Z]\\w+\\s*)+)");
 //        Pattern mainCharP = Pattern.compile("");
         
-        String additionalP = "\\s*((the? novel)|((the)?\\s*(([A-Z]\\w+\\s*)+)))?";
+        String additionalP = "\\s*(((the\\s+)?novel)|((the)?\\s*(([A-Z]\\w+\\s*)+)))?";
         
-        Pattern p = Pattern.compile("^What (is|are) " + additionalP);
+        Pattern p = Pattern.compile("^(W|w)hat\\s+(is|are)\\s+" + additionalP);
         Matcher m = p.matcher(question);
         if (m.find()) {
             outputQuestion.setAnswerType(AnswerType.DEFINITION);
-            if (m.group(1) != null) {
-                setMultiplicity(outputQuestion,m.group(1));
+            if (m.group(2) != null) {
+                setMultiplicity(outputQuestion,m.group(2));
             }
             
-            int start = 2;
+            int start = 3;
             if(m.groupCount() >= start && m.group(start) != null)
             {
                 if (m.group(start+1) != null) {
                     outputQuestion.addFocusType(FocusType.NOVEL);
 //                    question = question.replace(m.group(start + 1), "");
                 } else 
-                if (m.group(start+2) != null) {
+                if (m.group(start+3) != null) {
 //                    if (m.group(start + 3) != null) {
                     outputQuestion.addFocusType(FocusType.OBJECT);
 //                    } else {
 //                        outputQuestion.addFocusType(FocusType.PERSON);
 //                    }
 
-                    outputQuestion.addMainObject(m.group(start + 4));
+                    outputQuestion.addMainObject(m.group(start + 5));
 //                    question = question.replace(m2.group(0), "");
                 }
             }
@@ -215,29 +215,29 @@ public class Parser {
         }
         else
         {
-            p = Pattern.compile("^What (\\w+) (is|are) " + additionalP);
+            p = Pattern.compile("^(W|w)hat\\s+(\\w+)\\s+(is|are)\\s+" + additionalP);
             m = p.matcher(question);
             if (m.find()) {
                 outputQuestion.setAnswerType(AnswerType.DEFINITION);
 
-                if (m.group(2) != null) {
-                    setMultiplicity(outputQuestion, m.group(2));
+                if (m.group(3) != null) {
+                    setMultiplicity(outputQuestion, m.group(3));
                 }
 
 
-                int start = 3;
+                int start = 4;
                 if (m.groupCount() >= start && m.group(start) != null) {
                     if (m.group(start + 1) != null) {
                         outputQuestion.addFocusType(FocusType.NOVEL);
 //                    question = question.replace(m.group(start + 1), "");
-                    } else if (m.group(start + 2) != null) {
+                    } else if (m.group(start + 3) != null) {
 //                    if (m.group(start + 3) != null) {
                         outputQuestion.addFocusType(FocusType.OBJECT);
 //                    } else {
 //                        outputQuestion.addFocusType(FocusType.PERSON);
 //                    }
 
-                        outputQuestion.addMainObject(m.group(start + 4));
+                        outputQuestion.addMainObject(m.group(start + 5));
 //                    question = question.replace(m2.group(0), "");
                     }
                 }
@@ -246,14 +246,14 @@ public class Parser {
             }
             else
             {
-                p = Pattern.compile("^What ((does|did|do)|(\\w+))(\\W|$)" + additionalP );
+                p = Pattern.compile("^(W|w)hat\\s+((does|did|do)|(\\w+))(\\W|$)" + additionalP );
                 m = p.matcher(question);
                 if (m.find()) {
 //                    outputQuestion.setAnswerType(AnswerType.EXPLANATION);
-                    if (m.group(2) != null) {
+                    if (m.group(3) != null) {
                         outputQuestion.setAnswerType(AnswerType.DEFINITION);
 
-                        setMultiplicity(outputQuestion, m.group(2));
+                        setMultiplicity(outputQuestion, m.group(3));
 //                        if (m.group(1).toUpperCase().equals("IS")) {
 //                            outputQuestion.setMulitplicity(Multiplicity.MULTIPLE);
 //                        } else if (m.group(1).toUpperCase().equals("ARE")) {
@@ -266,11 +266,11 @@ public class Parser {
 //TOOD change spaces to \\s
 
 
-                    int start = 5;
+                    int start = 6;
                     if (m.groupCount() >= start && m.group(start) != null) {
                         if (m.group(start + 1) != null) {
                             outputQuestion.addFocusType(FocusType.NOVEL);
-                        } else if (m.group(start + 2) != null) {
+                        } else if (m.group(start + 3) != null) {
 //                    if (m.group(start + 3) != null) {
 //                            outputQuestion.addFocusType(FocusType.OBJECT);
 //                    } else {
@@ -283,16 +283,16 @@ public class Parser {
                         outputQuestion.addFocusType(FocusType.OBJECT);
 //                    }
 
-                            outputQuestion.addMainObject(m.group(start + 4));
+                            outputQuestion.addMainObject(m.group(start + 5));
                         }
                     }
 
                     question = question.replace(m.group(0), "");
-                    if(m.group(3) != null)
-                        question = m.group(3) + " " + question;
+                    if(m.group(4) != null)
+                        question = m.group(4) + " " + question;
                     else
                     {
-                        if(m.group(2) != null && ((question.trim().length() > 2 &&question.trim().startsWith("do ")) || 
+                        if(m.group(3) != null && ((question.trim().length() > 2 &&question.trim().startsWith("do ")) || 
                                 (question.trim().length() == 2 && question.trim().startsWith("do"))))
                         {
                             //What does he do
@@ -304,24 +304,24 @@ public class Parser {
             }
         }
 
-        p = Pattern.compile("^Who ((is|are)|(\\w+))(\\W|$)" + additionalP);
+        p = Pattern.compile("^(W|w)ho\\s+((is|are)|(\\w+))(\\W|$)+" + additionalP);
         m = p.matcher(question);
         if (m.find()) {
             outputQuestion.setAnswerType(AnswerType.PERSON);
-            if (m.group(2) != null) {
-                setMultiplicity(outputQuestion, m.group(2));
+            if (m.group(3) != null) {
+                setMultiplicity(outputQuestion, m.group(3));
             }
             
 //            FocusType defaultFocus = FocusType.PERSON;
 //            if(m.group(3))
                 
-            int start = 5;
+            int start = 6;
             if (m.groupCount() >= start && m.group(start) != null) {
                 if (m.group(start + 1) != null) {
                     outputQuestion.addFocusType(FocusType.NOVEL);
-                } else if (m.group(start + 2) != null) {
+                } else if (m.group(start + 3) != null) {
                     //Becouse we find name 
-                    if(m.group(2) != null) //other verb
+                    if(m.group(3) != null) //other verb //TODO check this
 //                    {
                         outputQuestion.setAnswerType(AnswerType.DEFINITION);
 //                        outputQuestion.addFocusType(FocusType.PERSON);
@@ -334,30 +334,31 @@ public class Parser {
 //                        outputQuestion.addFocusType(FocusType.PERSON);
 //                    }
 
-                    outputQuestion.addMainObject(m.group(start + 4));
+                    outputQuestion.addMainObject(m.group(start + 5));
                 }
             }
             
             question = question.replace(m.group(0), "");
-            if (m.group(3) != null) {
-                question = m.group(3) + " " + question;
+            if (m.group(4) != null) {
+                question = m.group(4) + " " + question;
             }
         }
 
-        p = Pattern.compile("^Where ((is|are|does|did|do)|(\\w+)) " + additionalP);
+//        System.out.println("^(W|w)here\\s+((is|are|does|did|do)|(\\w+))\\s+" + additionalP);
+        p = Pattern.compile("^(W|w)here\\s+((is|are|does|did|do)|(\\w+))\\s+" + additionalP);
         m = p.matcher(question);
         if (m.find()) {
             outputQuestion.setAnswerType(AnswerType.LOCATION);
-            if (m.group(2) != null) {
-                setMultiplicity(outputQuestion, m.group(2));
+            if (m.group(3) != null) {
+                setMultiplicity(outputQuestion, m.group(3));
             }
             
             
-            int start = 4;
+            int start = 5;
             if (m.groupCount() >= start && m.group(start) != null) {
                 if (m.group(start + 1) != null) {
                     outputQuestion.addFocusType(FocusType.NOVEL);
-                } else if (m.group(start + 2) != null) {
+                } else if (m.group(start + 3) != null) {
                     
 //                    if (m.group(start + 3) != null) {
                     outputQuestion.addFocusType(FocusType.OBJECT);
@@ -366,64 +367,64 @@ public class Parser {
 //                    }
 
                     
-                    outputQuestion.addMainObject(m.group(start + 4));
+                    outputQuestion.addMainObject(m.group(start + 5));
                 }
             }
 
             question = question.replace(m.group(0), "");
         }
         
-        p = Pattern.compile("^When ((does|did|do|is|are)|(\\w+)) " + additionalP);
+        p = Pattern.compile("^(W|w)hen\\s+((does|did|do|is|are)|(\\w+))\\s+" + additionalP);
         m = p.matcher(question);
         if (m.find()) {
             outputQuestion.setAnswerType(AnswerType.TIME);
-            if(m.group(2) != null)
+            if(m.group(3) != null)
             {
-                setMultiplicity(outputQuestion, m.group(2));
+                setMultiplicity(outputQuestion, m.group(3));
             }
             
             
-            int start = 4;
+            int start = 5;
             if (m.groupCount() >= start && m.group(start) != null) {
                 if (m.group(start + 1) != null) {
                     outputQuestion.addFocusType(FocusType.NOVEL);
-                } else if (m.group(start + 2) != null) {
+                } else if (m.group(start + 3) != null) {
 //                    if (m.group(start + 3) != null) {
                         outputQuestion.addFocusType(FocusType.OBJECT);
 //                    } else {
 //                        outputQuestion.addFocusType(FocusType.PERSON);
 //                    }
-                    outputQuestion.addMainObject(m.group(start + 4));
+                    outputQuestion.addMainObject(m.group(start + 5));
                 }
             }
 
             question = question.replace(m.group(0), "");
         }
         
-        p = Pattern.compile("^How ((does|did|do|is|are)|(\\w+)) " + additionalP);
+        p = Pattern.compile("^(H|h)ow\\s+((does|did|do|is|are)|(\\w+))\\s+" + additionalP);
         m = p.matcher(question);
         if (m.find()) {
             outputQuestion.setAnswerType(AnswerType.MODALITY);
 
             //TODO add word to ...
 
-            if (m.group(2) != null) {
-                setMultiplicity(outputQuestion, m.group(2));
+            if (m.group(3) != null) {
+                setMultiplicity(outputQuestion, m.group(3));
             }
 
 
-            int start = 4;
+            int start = 5;
             if (m.groupCount() >= start && m.group(start) != null) {
                 if (m.group(start + 1) != null) {
                     outputQuestion.addFocusType(FocusType.NOVEL);
-                } else if (m.group(start + 2) != null) {
+                } else if (m.group(start + 3) != null) {
 //                    if (m.group(start + 3) != null) {
                     outputQuestion.addFocusType(FocusType.OBJECT);
 //                    } else {
 //                        outputQuestion.addFocusType(FocusType.PERSON);
 //                    }
 
-                    outputQuestion.addMainObject(m.group(start + 4));
+                    outputQuestion.addMainObject(m.group(start + 5));
                 }
             }
 
@@ -633,6 +634,8 @@ public class Parser {
 //            String month = "\\d\\d[^0-9]";
 //            String day = "\\d\\d[^0-9]";
         String longMonth = "(January|February|March|April|May|June|July|August|September|October|November|December)";
+        String day = "(((twenty|thirty[- ]+)?(first|second|third|fourth|fifth|sixth|seventh|eighth|ninth|tenth))|"
+                + "(eleventh|twelfth|thirteenth|fourteenth|fifthteenth|sixteenth|seventeenth|eighteenth|nineteenth))";
 //                    String twoDigitMult = "([^|\\D]\\d{2}[^\\d])+";
 //                    String or = "|";
 //                    String sep = "[-,/ ]*";
@@ -644,10 +647,13 @@ public class Parser {
 //                    System.out.println("string: (" + x + ")");
 
         //in on
-        String x = "(((^|\\W)(in|on|year|month))?"
+
+        String x = "(?i)(((^|\\W)(in|on|year|month))?"
                 + "(([-,/ ]|^)\\d{4}([-,/ ]+\\d{1,2}){2}" + "|"
                 + "(([-,/ ]|^)+\\d{1,2}){0,2}[-,/ ]\\d{4}" + "|"
-                + "(([-,/ ]|^)+\\d{1,2}(th|rd|st)?)?(\\s+of)?" + longMonth + "([-,/ ]+\\d{1,2}(th|rd|st)?)?" + "([-,/ ]+\\d{4})?" + "))(\\D|$)";
+                + "([-,/ ]|^)+(\\d{1,2}(th|rd|st)?|" + day + ")?(\\s+of)?([-,/ ]|^)*" + longMonth + "([-,/ ]+\\d{1,2}(th|rd|st)?)?" + "([-,/ ]+\\d{4})?" + "))(\\D|$)";
+                
+//                + "(([-,/ ]|^)+\\d{1,2}(th|rd|st)?)?(\\s+of)?" + longMonth + "([-,/ ]+\\d{1,2}(th|rd|st)?)?" + "([-,/ ]+\\d{4})?" + "))(\\D|$)";
 
 //                    System.out.println("string: (" + x + ")");
 

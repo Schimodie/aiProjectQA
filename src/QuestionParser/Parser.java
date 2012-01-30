@@ -328,7 +328,7 @@ public class Parser {
 //                        outputQuestion.addFocusType(FocusType.PERSON);
 //                    }
 //                    else
-                        outputQuestion.addFocusType(FocusType.OBJECT);
+                        outputQuestion.addFocusType(FocusType.PERSON);
 //                    if (m.group(start + 3) != null) {
 //                    outputQuestion.addFocusType(FocusType.OBJECT);
 //                    } else {

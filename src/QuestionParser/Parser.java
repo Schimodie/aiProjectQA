@@ -91,7 +91,6 @@ public class Parser {
         
         Question outputQuestion = new Question(question);
         
-        question = question.replaceAll("[\\?,.!:]", " ");
         question = question.replaceFirst("in\\s+the\\s+novel", ""); 
 
 //
@@ -494,6 +493,8 @@ public class Parser {
         if (output != null) {
             question = output;
         }
+        
+        
 
         setKeywords(outputQuestion, question);
 
@@ -516,7 +517,10 @@ public class Parser {
         ///(January|February|March|April|May|June|July|August|September|October|November|December) \d\d, \d\d\d\d/i';
         //(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)
         
+        
         //Filtering
+        question = question.replaceAll("[\\?,.!:]", " ");
+
         question = question.trim().replaceAll("(^|\\W)(the|&|or|and)(\\W|$)", " ");
         
 
@@ -640,10 +644,10 @@ public class Parser {
 //                    System.out.println("string: (" + x + ")");
 
         //in on
-        String x = "(^|\\W)"
-                + "((in|on|year|month)?"
-                + "(([-,/ ^]\\d{1,2}){0,2}[-,/ ]\\d{4}" + "|"
-                + "([-,/ ]\\d{1,2})?(th)?(\\s+of)?" + longMonth + "([-,/ ]+\\d{0,2})?" + "([-,/ ]+\\d{4})?" + "))\\D";
+        String x = "(((^|\\W)(in|on|year|month))?"
+                + "(([-,/ ]|^)\\d{4}([-,/ ]+\\d{1,2}){2}" + "|"
+                + "(([-,/ ]|^)+\\d{1,2}){0,2}[-,/ ]\\d{4}" + "|"
+                + "(([-,/ ]|^)+\\d{1,2}(th|rd|st)?)?(\\s+of)?" + longMonth + "([-,/ ]+\\d{1,2}(th|rd|st)?)?" + "([-,/ ]+\\d{4})?" + "))(\\D|$)";
 
 //                    System.out.println("string: (" + x + ")");
 
@@ -651,8 +655,8 @@ public class Parser {
         Pattern dateP = Pattern.compile(x);
         Matcher dateM = dateP.matcher(text);
         while (dateM.find()) {
-            outputQuestion.addDate(dateM.group(4));
-            text = text.replace(dateM.group(2), "");
+            outputQuestion.addDate(dateM.group(5).trim());
+            text = text.replace(dateM.group().trim(), "").trim();
             found = true;
         }
         

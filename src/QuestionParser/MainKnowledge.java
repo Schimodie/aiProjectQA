@@ -291,6 +291,29 @@ public class MainKnowledge {
 //        return text;
     }
     
+    public static ArrayList<String> getDates(String text)
+    {
+        ArrayList<String> output = null;
+        String longMonth = "(January|February|March|April|May|June|July|August|September|October|November|December)";
+
+
+        //in on
+        String x = "(([-,/ ]|^)\\d{4}([-,/ ]+\\d{1,2}){2}" + "|"
+                + "(([-,/ ]|^)+\\d{1,2}){0,2}[-,/ ]\\d{4}" + "|"
+                + "(([-,/ ]|^)+\\d{1,2}(th|rd|st)?)?(\\s+of)?" + longMonth + "([-,/ ]+\\d{1,2}(th|rd|st)?)?" + "([-,/ ]+\\d{4})?" + ")(\\D|$)";
+
+        Pattern dateP = Pattern.compile(x);
+        Matcher dateM = dateP.matcher(text);
+        while (dateM.find()) {
+            text = text.replace(dateM.group(1), "");
+            if(output == null)
+                output = new ArrayList<String>();
+            output.add(dateM.group(1).trim());
+        }
+
+        return output;
+    }
+    
     
     
     

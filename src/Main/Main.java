@@ -27,9 +27,29 @@ public class Main {
         
         System.out.println(a.answer(q));
 
+
+
+
+        
+        //Testing time parsing
+//        String situation = "At the request of Mr. Gatsby we are going to play for you Mr Vladimir Tostoff's latest work which attracted"
+//+"so much attention at Carnegie Hall last May.";
+//        String situation = "It is an old time-table now, disintegrating at its folds and headed \"This schedule in effect July 5th, 1922.\"";
+//        String situation = "I remembered of course that the World's Series had been fixed in 1919 but if I had "
+//                + "thought of it at all I would have thought of it as a thing that merely HAPPENED, the end of some inevitable chain.";
+//        ArrayList<String> dates = MainKnowledge.getDates(situation) ;
+//        if(dates != null)
+//        {
+//            for(String date : dates)
+//            {
+//                System.out.println("d: " + date);
+//            }
+//        }
+        
+        
         /*//Search 1 example
-        String data = MainKnowledge.searchWiki("Myrtle Wilson", null) ;
-        System.out.println("out: " + data);
+//        String data = MainKnowledge.searchWiki("Myrtle Wilson", null) ;
+//        System.out.println("out: " + data);
 
         //Search 2 example
         ArrayList<String> keywords = new ArrayList<String>();

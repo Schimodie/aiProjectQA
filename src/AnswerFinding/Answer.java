@@ -127,8 +127,71 @@ public class Answer
                 
                 break;
             }
-            case EVENT:
+            case EVENT: {
+                int score;
+                int maxScore = Integer.MIN_VALUE;
+                Action actQr = null;
+                String text;
+                ArrayList<String> actDates;
+                
+                for (Action act : this.novelInfo.getActions()) {
+                    //actDates = MainKnowledge.getDates(act.getText());
+                    //score = 0;
+                    text = act.getText();
+                    
+                    for (int i = 0; i < text.length(); ++i) {
+                        for (String date : dates) {
+                            if (i + date.length() <= text.length()) {
+                                if (
+                                    text.regionMatches (
+                                        i,
+                                        date.toLowerCase(),
+                                        0,
+                                        date.length()
+                                    )
+                                ) {
+                                    return 
+                                        "The following event occured:\n" +
+                                        actQr.getText();
+                                }
+                            }
+                        }
+                    }
+                    
+                    /*for (String date : dates) {
+                        for (String actDate : actDates) {
+                            for (
+                                int i = 0;
+                                i < actDate.length() - date.length() + 1;
+                                ++i
+                            ) {
+                                if (
+                                    actDate.regionMatches (
+                                        i,
+                                        date,
+                                        0,
+                                        date.length()
+                                    )
+                                ) {
+                                    ++score;
+                                }                                
+                            }
+                        }
+                    }
+                    
+                    if (score > maxScore) {
+                        maxScore = score;
+                        actQr = act;
+                    }*/
+                }
+                
+                /*if (maxScore != 0)
+                    return 
+                        "The following event occured:\n" +
+                        actQr.getText();*/
+                
                 break;
+            }
             case LOCATION: {
                 if (q.containsFocusType(FocusType.NOVEL)) {
                     int index;
@@ -435,8 +498,23 @@ public class Answer
                 
                 break;
             }
-            case TIME:
+            case TIME: {
+                if (q.containsFocusType(FocusType.NOVEL)) {
+                    String pattern = "[1-2][0-9][0-9][0-9]";
+                    ArrayList<String> summaryDates =
+                        MainKnowledge.getDates(this.novelInfo.getSummary());
+                    
+                    for (String date : summaryDates) {
+                        for (int i = 0; i < date.length() - 3; ++i) {
+                            if (date.substring(i, i + 4).matches(pattern)) {
+                                return "The novel took place in " + date;
+                            }
+                        }
+                    }
+                }
+                
                 break;
+            }
         }
         
         return "Answer not found!";

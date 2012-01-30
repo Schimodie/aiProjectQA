@@ -27,27 +27,7 @@ public class Main {
      */
     
     
-    public static void main(String[] args){
-        /// TODO code application logic here
-//        Parser parser = new Parser();
-//        Question question = parser.Parse("What's your name?");
-//
-//        System.out.println("Question Type: " + question.getQuestionType());
-//        System.out.println("Answer Type: " + question.getAnswerType());
-
-
-//        System.out.println("out: " + Pattern.compile("What is?").matcher("What ").matches());
-        
-        
-        
-        /*String[] questions = TestingData.getMainQuestions(1);
-        for(String question2 : questions)
-        {
-            Question parsedQuestion = Parser.parse(question2);
-            System.out.println("Out: " + parsedQuestion);
-        }*/
-        
-        int score = Integer.MIN_VALUE;
+    public static void main(String[] args) {
         NovelInfo ni = new NovelInfo("output.xml", "rezumat.txt", "situations.xml");
         Answer a = new Answer(ni);
         String question = "Who is Ebenezer Scrooge?";
@@ -89,8 +69,6 @@ public class Main {
         
         for (QueryResult qr : qrs)
             System.out.println(qr.getScore() + " " + qr.getResult());*/
-        
-        //System.out.println((new File(".")).getAbsolutePath());
     }
 }
 

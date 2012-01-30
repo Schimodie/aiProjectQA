@@ -74,7 +74,7 @@ public class Answer
                     String chr = this.getCharFullName(q.getMainObjects().get(0));
                     String data = MainKnowledge.searchWiki(chr, null);
                     
-                    return data;
+                    return "Data found about " + chr + ":\n" + data.trim();
                 }
                 
                 break;

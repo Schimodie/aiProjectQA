@@ -14,9 +14,10 @@ import java.util.ArrayList;
  */
 public class Main {
     public static void main(String[] args) {
+        
         NovelInfo ni = new NovelInfo("output.xml", "rezumat.txt", "situations.xml");
         Answer a = new Answer(ni);
-        String question = "What happened in December?";
+        String question = "Who is Marley?";
         Question q = Parser.parse(question);
         ArrayList<QueryResult> qrs = new ArrayList<QueryResult>();
         

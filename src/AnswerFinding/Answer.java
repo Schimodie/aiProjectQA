@@ -33,9 +33,7 @@ public class Answer
         switch (at) {
             case DEFINITION: {
                 if (q.containsFocusType(FocusType.NOVEL)) {
-                    return 
-                        "This is the summary of the novel:\n" +
-                        this.novelInfo.getSummary();
+                    return this.novelInfo.getSummary();
                 }
                 else if (q.containsFocusType(FocusType.RELATION)) {
                     ArrayList<Relation> rels = this.novelInfo.getRelations();
@@ -63,9 +61,7 @@ public class Answer
                                     rel.getBond();
                             }
                             else {
-                                return 
-                                    "The relationship is:\n" +
-                                    rel.getBond();
+                                return rel.getBond();
                             }
                         }
                     }
@@ -76,9 +72,17 @@ public class Answer
                     
                     for (String str : mo) {
                         chr = this.getCharFullName(str);
+                        
+                        if ("".equals(chr)) {
+                            chr = this.toName(str);
+                        }
+                        
                         data += 
-                            "Data found about " + chr + ":\n" +
                             MainKnowledge.searchWiki(chr, null).trim() + "\n";
+                    }
+                    
+                    if ("".equals(chr)) {
+                        break;
                     }
                     
                     return data.trim();
@@ -97,14 +101,11 @@ public class Answer
                         }
                     }
                     
-                    if (actQr ==null) {
+                    if (actQr == null) {
                         break;
                     }
                     
-                    return
-                        "The following data has been found about " +
-                        this.getCharFullName(mo.get(0)) + "'s occupation:\n" +
-                        actQr.getResult();
+                    return actQr.getResult();
                 }
                 else {
                     String chr = "";
@@ -118,7 +119,6 @@ public class Answer
                         }
                         
                         data += 
-                            "Data found about " + chr + ":\n" +
                             MainKnowledge.searchWiki(chr, null).trim() + "\n";
                     }
                     
@@ -154,9 +154,7 @@ public class Answer
                                 ("".equals(before) || before.matches(pattern)) && 
                                 ("".equals(after) || after.matches(pattern))
                             ) {
-                                return 
-                                    "The following event occured:\n" +
-                                    act.getText();
+                                return act.getText();
                             }
                         }
                     }   
@@ -200,9 +198,7 @@ public class Answer
                         }
                     }
                     
-                    return 
-                        "The novel takes place in " + 
-                        this.toName(locs.get(index));
+                    return this.toName(locs.get(index));
                 }
                 else  {
                     int max = Integer.MIN_VALUE;
@@ -246,9 +242,7 @@ public class Answer
                             str = this.findInString(strs, sitQr.getResult());
                             
                             if (!"".equals(str)) {
-                                return
-                                    "The following location has been found: " +
-                                    this.toName(str);
+                                return this.toName(str);
                             }
                         }
                     }
@@ -261,17 +255,13 @@ public class Answer
                         if (act.getPlaces().length > 0) {
                             str = act.getPlaces()[0];
                             
-                            return
-                                "The following location has been found: " +
-                                this.toName(str);
+                            return this.toName(str);
                         }
                         else {
                             str = this.findInString(strs, actQr.getResult());
 
                             if (!"".equals(str)) {
-                                return
-                                    "The following location has been found: " +
-                                    this.toName(str);
+                                return this.toName(str);
                             }
                         }
                     }
@@ -279,9 +269,7 @@ public class Answer
                         str = this.findInString(strs, sitQr.getResult());
                             
                         if (!"".equals(str)) {
-                            return
-                                "The following location has been found: " +
-                                this.toName(str);
+                            return this.toName(str);
                         }
                     }
                     
@@ -292,14 +280,10 @@ public class Answer
             case MODALITY: {
                 if (q.containsFocusType(FocusType.NOVEL)) {
                     if (this.contains(keywords, "begin")) {
-                        return 
-                            "The novel begins as follows:\n" + 
-                            this.novelInfo.getBeginningOfSummary();
+                        return this.novelInfo.getBeginningOfSummary();
                     }
                     else if (this.contains(keywords, "end")) {
-                        return
-                            "The novel ends as follows:\n" +
-                            this.novelInfo.getEndOfSummary();
+                        return this.novelInfo.getEndOfSummary();
                     }
                 }
                 
@@ -313,8 +297,7 @@ public class Answer
                             
                     switch (q.getMulitplicity()) {
                         case SINGLE: {
-                            return
-                                "The following main character has been found: " +
+                            return 
                                 this.toName (
                                     this.novelInfo.getCharacters().get(0)
                                                   .getName()
@@ -339,9 +322,7 @@ public class Answer
                                     "\n";
                             }
                             
-                            return
-                                "The following main characters have been found:\n" +
-                                str.trim();
+                            return str.trim();
                         }
                     }
                 }
@@ -374,17 +355,13 @@ public class Answer
                                     this.getCharFullName(e1)
                                         .equals(this.getCharFullName(chr))
                                 ) {
-                                    return
-                                        "The person you looked for is " + 
-                                        this.getCharFullName(e2);
+                                    return this.getCharFullName(e2);
                                 }
                                 else if (
                                     this.getCharFullName(e2)
                                         .equals(this.getCharFullName(chr))
                                 ) {
-                                    return
-                                        "The person you looked for is " + 
-                                        this.getCharFullName(e1);
+                                    return this.getCharFullName(e1);
                                 }
                             }
                         }
@@ -428,9 +405,7 @@ public class Answer
                             str = this.findInString(strs, sitQr.getResult());
                             
                             if (!"".equals(str)) {
-                                return
-                                    "The following character has been found: " +
-                                    this.toName(str);
+                                return this.toName(str);
                             }
                         }
                     }
@@ -443,17 +418,13 @@ public class Answer
                         if (act.getCharacters().length > 0) {
                             str = act.getCharacters()[0];
                             
-                            return
-                                "The following character has been found: " +
-                                this.toName(str);
+                            return this.toName(str);
                         }
                         else {
                             str = this.findInString(strs, actQr.getResult());
 
                             if (!"".equals(str)) {
-                                return
-                                    "The following character has been found: " +
-                                    this.toName(str);
+                                return this.toName(str);
                             }
                         }
                     }
@@ -461,9 +432,7 @@ public class Answer
                         str = this.findInString(strs, sitQr.getResult());
                             
                         if (!"".equals(str)) {
-                            return
-                                "The following character has been found: " +
-                                this.toName(str);
+                            return this.toName(str);
                         }
                     }
                 }
@@ -479,7 +448,7 @@ public class Answer
                     for (String date : summaryDates) {
                         for (int i = 0; i < date.length() - 3; ++i) {
                             if (date.substring(i, i + 4).matches(pattern)) {
-                                return "The novel took place in " + date;
+                                return date;
                             }
                         }
                     }
